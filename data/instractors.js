@@ -713,154 +713,154 @@ export const teamMembers = [
 //
 //
 //
-// ];
-// export const rating = [
-//   { id: 1, star: 5, text: "4.5 & up", range: [4.5, 5] },
-//   { id: 2, star: 5, text: "4.0 & up",range: [4, 5] },
-//   { id: 3, star: 5, text: "3.5 & up", range: [3.5, 5] },
-//   { id: 4, star: 5, text: "3.0 & up", range: [3, 5] },
-// ];
-// export const categories = [
-//   { id: 1, title: "Animation",  },
-//   { id: 2, title: "Design", },
-//   { id: 3, title: "Illustration", },
-//
-//   { id: 5, title: "Business",  },
-//
-//
-// ];
-// export const teachers = [
-//   {
-//     id: 1,
-//     imageSrc: "/assets/img/home-6/trust/1.png",
-//     name: "Marvin McKinney",
-//     jobTitle: "Designer",
-//   },
-//   {
-//     id: 2,
-//     imageSrc: "/assets/img/home-6/trust/2.png",
-//     name: "Ralph Edwards",
-//     jobTitle: "Designer",
-//   },
-//   {
-//     id: 3,
-//     imageSrc: "/assets/img/home-6/trust/3.png",
-//     name: "Annette Black",
-//     jobTitle: "Designer",
-//   },
-//   {
-//     id: 4,
-//     imageSrc: "/assets/img/home-6/trust/4.png",
-//     name: "Jane Cooper",
-//     jobTitle: "Designer",
-//   },
-// ];
-//
-// export const marketingCoordinator = {
-//   id:45,
-//   name: "Wade Warren",
-//   imgSrc: "/assets/img/home-6/trust/big.png",
-//   rating: "4.5",
-//   students: "565",
-//   courses: "14",
-//   role:'Marketing Coordinator'
-// };
-//
-// export const featuredTracher = {
-//   name: "Ali Tufan",
-//   desc: "Teaching on Education platform has been an amazing experience",
-//   title: "Designer, Apple Inc",
-//   imgSrc: "/assets/img/home-7/courses/1.png",
-// };
-//
-// export const instractorsEight = [
-//   {
-//     id: 46,
-//     image: "/assets/img/speakers/1.png",
-//     category:'Illustration',
-//     rating: 4,
-//     reviews: 3545,
-//     name: "Jerome Bell",
-//     role: "Marketing Coordinator",
-//     students: 692,
-//     courses: 15,
-//     socialProfile: [
-//       {
-//         icon: "icon-facebook",
-//         url: "https://www.facebook.com/",
-//       },
-//       {
-//         icon: "icon-twitter",
-//         url: "https://twitter.com/?lang=en",
-//       },
-//       {
-//         icon: "icon-instagram",
-//         url: "https://www.instagram.com/",
-//       },
-//       {
-//         icon: "icon-linkedin",
-//         url: "https://www.linkedin.com/",
-//       },
-//     ],
-//   },
-//   {
-//     id: 47,
-//     image: "/assets/img/speakers/2.png",
-//     category:'Illustration',
-//     rating: 4.5,
-//     reviews: 3545,
-//     name: "Bessie Cooper",
-//     role: "President of Sales",
-//     students: 692,
-//     courses: 15,
-//     socialProfile: [
-//       {
-//         icon: "icon-facebook",
-//         url: "https://www.facebook.com/",
-//       },
-//       {
-//         icon: "icon-twitter",
-//         url: "https://twitter.com/?lang=en",
-//       },
-//       {
-//         icon: "icon-instagram",
-//         url: "https://www.instagram.com/",
-//       },
-//       {
-//         icon: "icon-linkedin",
-//         url: "https://www.linkedin.com/",
-//       },
-//     ],
-//   },
-//   {
-//     id: 48,
-//     image: "/assets/img/speakers/3.png",
-//     category:'Animation',
-//     rating: 3,
-//     reviews: 3545,
-//     name: "Kristin Watson",
-//     role: "Nursing Assistant",
-//     students: 692,
-//     courses: 15,
-//     socialProfile: [
-//       {
-//         icon: "icon-facebook",
-//         url: "https://www.facebook.com/",
-//       },
-//       {
-//         icon: "icon-twitter",
-//         url: "https://twitter.com/?lang=en",
-//       },
-//       {
-//         icon: "icon-instagram",
-//         url: "https://www.instagram.com/",
-//       },
-//       {
-//         icon: "icon-linkedin",
-//         url: "https://www.linkedin.com/",
-//       },
-//     ],
-//   },
+];
+export const rating = [
+  { id: 1, star: 5, text: "4.5 & up", range: [4.5, 5] },
+  { id: 2, star: 5, text: "4.0 & up",range: [4, 5] },
+  { id: 3, star: 5, text: "3.5 & up", range: [3.5, 5] },
+  { id: 4, star: 5, text: "3.0 & up", range: [3, 5] },
+];
+export const categories = [
+  { id: 1, title: "Animation",  },
+  { id: 2, title: "Design", },
+  { id: 3, title: "Illustration", },
+
+  { id: 5, title: "Business",  },
+
+
+];
+export const teachers = [
+  {
+    id: 1,
+    imageSrc: "/assets/img/home-6/trust/1.png",
+    name: "Marvin McKinney",
+    jobTitle: "Designer",
+  },
+  {
+    id: 2,
+    imageSrc: "/assets/img/home-6/trust/2.png",
+    name: "Ralph Edwards",
+    jobTitle: "Designer",
+  },
+  {
+    id: 3,
+    imageSrc: "/assets/img/home-6/trust/3.png",
+    name: "Annette Black",
+    jobTitle: "Designer",
+  },
+  {
+    id: 4,
+    imageSrc: "/assets/img/home-6/trust/4.png",
+    name: "Jane Cooper",
+    jobTitle: "Designer",
+  },
+];
+
+export const marketingCoordinator = {
+  id:45,
+  name: "Wade Warren",
+  imgSrc: "/assets/img/home-6/trust/big.png",
+  rating: "4.5",
+  students: "565",
+  courses: "14",
+  role:'Marketing Coordinator'
+};
+
+export const featuredTracher = {
+  name: "Ali Tufan",
+  desc: "Teaching on Education platform has been an amazing experience",
+  title: "Designer, Apple Inc",
+  imgSrc: "/assets/img/home-7/courses/1.png",
+};
+
+export const instractorsEight = [
+  {
+    id: 46,
+    image: "/assets/img/speakers/1.png",
+    category:'Illustration',
+    rating: 4,
+    reviews: 3545,
+    name: "Jerome Bell",
+    role: "Marketing Coordinator",
+    students: 692,
+    courses: 15,
+    socialProfile: [
+      {
+        icon: "icon-facebook",
+        url: "https://www.facebook.com/",
+      },
+      {
+        icon: "icon-twitter",
+        url: "https://twitter.com/?lang=en",
+      },
+      {
+        icon: "icon-instagram",
+        url: "https://www.instagram.com/",
+      },
+      {
+        icon: "icon-linkedin",
+        url: "https://www.linkedin.com/",
+      },
+    ],
+  },
+  {
+    id: 47,
+    image: "/assets/img/speakers/2.png",
+    category:'Illustration',
+    rating: 4.5,
+    reviews: 3545,
+    name: "Bessie Cooper",
+    role: "President of Sales",
+    students: 692,
+    courses: 15,
+    socialProfile: [
+      {
+        icon: "icon-facebook",
+        url: "https://www.facebook.com/",
+      },
+      {
+        icon: "icon-twitter",
+        url: "https://twitter.com/?lang=en",
+      },
+      {
+        icon: "icon-instagram",
+        url: "https://www.instagram.com/",
+      },
+      {
+        icon: "icon-linkedin",
+        url: "https://www.linkedin.com/",
+      },
+    ],
+  },
+  {
+    id: 48,
+    image: "/assets/img/speakers/3.png",
+    category:'Animation',
+    rating: 3,
+    reviews: 3545,
+    name: "Kristin Watson",
+    role: "Nursing Assistant",
+    students: 692,
+    courses: 15,
+    socialProfile: [
+      {
+        icon: "icon-facebook",
+        url: "https://www.facebook.com/",
+      },
+      {
+        icon: "icon-twitter",
+        url: "https://twitter.com/?lang=en",
+      },
+      {
+        icon: "icon-instagram",
+        url: "https://www.instagram.com/",
+      },
+      {
+        icon: "icon-linkedin",
+        url: "https://www.linkedin.com/",
+      },
+    ],
+  },
 ];
 
 export const instractorsNine = [
@@ -921,8 +921,6 @@ export const instractorsNine = [
     id: 51,
     name: "Cody Fisher",
     image: "/assets/img/streams/3.png",
-    category:'Illustration',
-    
     category:'Animation',
     email: "cody@gmail.com",
     role: "Nursing Assistant",
