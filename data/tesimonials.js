@@ -1,54 +1,50 @@
 export const testimonials = [
   {
     id: 0,
-    imageSrc: "/assets/img/testimonials/1.png",
-    name: "Courtney Henry",
-    position: "Web Designer",
-    comment: "Great Work",
-    description: `I think Educrat is the best theme I ever seen this year.
-        Amazing design, easy to customize and a design quality
-        superlative account on its cloud platform for the
-        optimized performance`,
+    imageSrc: "/assets/img/testimonials/sarah_williams.png",
+    name: "Sarah Williams",
+    position: "Data Scientist",
+    comment: "Revolutionary Approach to Learning",
+    description: `The "Learn-To-Code" platform has completely redefined my understanding of coding. The AI-driven dynamic content keeps me engaged and the courses are nothing short of state-of-the-art.`,
   },
   {
     id: 1,
-    imageSrc: "/assets/img/testimonials/2.png",
-    name: "Ronald Richards",
-    position: "President of Sales",
-    comment: "Great Work",
-    description: `I think Educrat is the best theme I ever seen this year.
-        Amazing design, easy to customize and a design quality
-        superlative account on its cloud platform for the
-        optimized performance`,
+    imageSrc: "/assets/img/testimonials/mark_thompson.png",
+    name: "Mark Thompson",
+    position: "Full-Stack Developer",
+    comment: "A Community To Grow",
+    description: `The interactive courses and community-driven approach make learning to code an incredible experience. This is the future of online education.`,
   },
   {
     id: 2,
-    imageSrc: "/assets/img/testimonials/3.png",
-    name: "Annette Black",
-    position: "Nursing Assistant",
-    comment: "Great Work",
-    description: `I think Educrat is the best theme I ever seen this year.
-        Amazing design, easy to customize and a design quality
-        superlative account on its cloud platform for the
-        optimized performance`,
+    imageSrc: "/assets/img/testimonials/emily_clark.png",
+    name: "Emily Clark",
+    position: "Frontend Developer",
+    comment: "Exceptional Quality, Unbeatable Price",
+    description: `The quality of courses is unparalleled, and the fact that it's mostly free just blows my mind. The passion of the founders shines through every lesson.`,
   },
   {
     id: 3,
-    imageSrc: "/assets/img/testimonials/4.png",
-    name: "Courtney Henry",
-    position: "Web Designer",
-    comment: "Great Work",
-    description: `I think Educrat is the best theme I ever seen this year.
-        Amazing design, easy to customize and a design quality
-        superlative account on its cloud platform for the
-        optimized performance`,
+    imageSrc: "/assets/img/testimonials/david_lee.png",
+    name: "David Lee",
+    position: "Content Creator",
+    comment: "Creators' Paradise",
+    description: `As a creator, "learn-to-code" gave me a platform to reach a global audience. Their hand-picked approach ensures that students get top-notch content.`,
+  },
+  {
+    id: 4,
+    imageSrc: "/assets/img/testimonials/karen_johnson.png",
+    name: "Karen Johnson",
+    position: "Software Engineer",
+    comment: "Beyond Just Coding",
+    description: `The platform's focus on real-world, collaborative projects has enriched my learning experience. It's not just coding, it's holistic engineering.`,
   },
 ];
 
 export const testimonialsTwo = [
   {
     id: 1,
-    author: "Ali Tufan",
+    author: "David Lee",
     position: "Product Manager, Apple Inc",
     text: "It is no exaggeration to say this Educrat experience was transformative–both professionally and personally. This workshop will long remain a high point of my life.",
   },

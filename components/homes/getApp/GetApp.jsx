@@ -37,33 +37,8 @@ export default function GetApp() {
                 data-aos="fade-up"
                 data-aos-duration={600}
               >
-                Take classes on the go with the educrat app. Stream or download
-                to watch on the plane, the subway, or wherever you learn best.
+                Experience seamless learning on our fully responsive platform, optimized for desktop, tablet, and phone. Whether you're at home, in the office, or on the go, our courses are accessible anytime, anywhere.
               </p>
-              <div className="app-content__buttons">
-                <Link href="#">
-                  <Image
-                    width={210}
-                    height={60}
-                    style={{ height: "100%", width: "100%" }}
-                    src="/assets/img/app/buttons/1.svg"
-                    alt="button"
-                    data-aos="fade-up"
-                    data-aos-duration={600}
-                  />
-                </Link>
-                <Link href="#">
-                  <Image
-                    width={190}
-                    height={60}
-                    style={{ height: "100%", width: "100%" }}
-                    src="/assets/img/app/buttons/2.svg"
-                    alt="button"
-                    data-aos="fade-up"
-                    data-aos-duration={600}
-                  />
-                </Link>
-              </div>
             </div>
           </div>
         </div>

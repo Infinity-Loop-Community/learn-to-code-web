@@ -3,19 +3,19 @@ export const steps = [
     id: 1,
     icon: "icon-online-learning-4 text-64 text-green-1",
     title: "01. Learn",
-    text: "Lorem ipsum dolor sit amet, consectetur dolorili adipiscing elit. Felis donec massa aliqua.",
+    text: "Learn: Immerse yourself in our state-of-the-art courses, tailored to your learning style through AI-driven personalization. Gain the skills you need from industry-leading creators.",
   },
   {
     id: 2,
-    icon: "icon-graduation-1 text-64 text-green-1",
-    title: "02. Graduate",
-    text: "Lorem ipsum dolor sit amet, consectetur dolorili adipiscing elit. Felis donec massa aliqua.",
+    icon: "icon-working-at-home-2 text-64 text-green-1",
+    title: "02. Practice",
+    text: "Apply what you've learned through real-world projects and collaborative exercises. Our community-driven approach provides a platform for hands-on experience and peer feedback.",
   },
   {
     id: 3,
-    icon: "icon-working-at-home-2 text-64 text-green-1",
-    title: "03. Work",
-    text: "Lorem ipsum dolor sit amet, consectetur dolorili adipiscing elit. Felis donec massa aliqua.",
+    icon: "icon-graduation-1 text-64 text-green-1",
+    title: "03. Graduate",
+    text: " Achieve mastery and gain a certification that reflects your expertise. Our graduates are equipped with both the technical skills and holistic engineering know-how to excel in the industry.",
   },
 ];
 

@@ -25,8 +25,7 @@ export default function GetApp() {
                 <br /> <span>Anywhere</span>
               </h2>
               <p className="app-content__text">
-                Take classes on the go with the educrat app. Stream or download
-                to watch on the plane, the subway, or wherever you learn best.
+                Experience seamless learning on our fully responsive platform, optimized for desktop, tablet, and phone. Whether you're at home, in the office, or on the go, our courses are accessible anytime, anywhere.
               </p>
               <div className="app-content__buttons">
                 <Link href="#">

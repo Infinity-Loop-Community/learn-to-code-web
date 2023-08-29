@@ -10,29 +10,29 @@ import masthead_icon_1 from "../../../public/assets/img/masthead/icons/1.svg";
 import masthead_icon_2 from "../../../public/assets/img/masthead/icons/2.svg";
 import masthead_icon_3 from "../../../public/assets/img/masthead/icons/3.svg";
 // move img and icon
-import move_img_1 from "../../../public/assets/img/masthead/1.png";
+import move_img_1 from "../../../public/assets/img/masthead/10.png";
 
-import move_img_2 from "../../../public/assets/img/masthead/2.png";
-import move_img_3 from "../../../public/assets/img/masthead/3.png";
+import move_img_2 from "../../../public/assets/img/masthead/11.png";
+import move_img_3 from "../../../public/assets/img/masthead/12.png";
 import move_icon_1 from "../../../public/assets/img/masthead/1.svg";
-import move_icon_2 from "../../../public/assets/img/masthead/4.png";
+import move_icon_2 from "../../../public/assets/img/masthead/sesigl_rounded.png";
 import move_icon_3 from "../../../public/assets/img/masthead/2.svg";
 
 const masthead_info = [
   {
     id: 1,
     icon: masthead_icon_1,
-    text: "Over 12 million students",
+    text: "Over 10 thousand students",
   },
   {
     id: 2,
     icon: masthead_icon_2,
-    text: "More than 60,000 courses",
+    text: "Educating YOU is our mission",
   },
   {
     id: 3,
     icon: masthead_icon_3,
-    text: "Learn anything online",
+    text: "Everyone can learn to code",
   },
 ];
 
@@ -41,8 +41,8 @@ const hero_content = {
   text_underline: "Educators",
   info_hero: (
     <>
-      Build skills with courses, certificates, and degrees online from
-      <br /> world-class universities and companies.
+      Build skills with interactive courses, combined with a vibrant community led by
+      <br /> world-class software engineers.
     </>
   ),
   starts: [
@@ -126,18 +126,18 @@ const HomeHero = () => {
                       href="/signup"
                       className="button -md -purple-1 text-white"
                     >
-                      Join For Free
+                      Join Waitlist
                     </Link>
                   </div>
-                  <div className="col-12 col-sm-auto">
-                    <Link
-                      data-barba
-                      href="/courses-list-1"
-                      className="button -md -outline-green-1 text-green-1"
-                    >
-                      Find Courses
-                    </Link>
-                  </div>
+                  {/*<div className="col-12 col-sm-auto">*/}
+                  {/*  <Link*/}
+                  {/*    data-barba*/}
+                  {/*    href="/courses-list-1"*/}
+                  {/*    className="button -md -outline-green-1 text-green-1"*/}
+                  {/*  >*/}
+                  {/*    Find Courses*/}
+                  {/*  </Link>*/}
+                  {/*</div>*/}
                 </div>
                 <div
                   data-aos="fade-up"
@@ -184,9 +184,9 @@ const HomeHero = () => {
                     </div>
                     <div className="ml-20">
                       <div className="text-orange-1 text-16 fw-500 lh-1">
-                        3.000 +
+                        Developer Growth
                       </div>
-                      <div className="mt-3">Free Courses</div>
+                      <div className="mt-3">Frontend, Backend and Full-Stack courses</div>
                     </div>
                   </div>
                 </div>
@@ -195,7 +195,7 @@ const HomeHero = () => {
                   <Image
                     className="js-mouse-move"
                     data-move="70"
-                    src={move_img_2}
+                    src={move_img_3}
                     style={{ objectFit: "cover" }}
                     alt="image"
                   />
@@ -203,12 +203,12 @@ const HomeHero = () => {
                     data-move="60"
                     className="lg:d-none img-el -w-260 px-20 py-20 d-flex items-center bg-white rounded-8 js-mouse-move"
                   >
-                    <Image src={move_icon_2} alt="icon" />
+                    <Image src={move_icon_2} alt="icon" width={70} />
                     <div className="ml-20">
                       <div className="text-dark-1 text-16 fw-500 lh-1">
-                        Ali Tufan
+                        Sebastian Sigl
                       </div>
-                      <div className="mt-3">UX/UI Designer</div>
+                      <div className="mt-3">Staff Engineer and Technical Lead</div>
                       <div className="d-flex x-gap-5 mt-3">
                         {starts.map((start, index) => (
                           <div key={index}>
@@ -224,7 +224,7 @@ const HomeHero = () => {
                   <Image
                     className="js-mouse-move"
                     data-move="40"
-                    src={move_img_3}
+                    src={move_img_2}
                     style={{ objectFit: "cover" }}
                     alt="image"
                   />

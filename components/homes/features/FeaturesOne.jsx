@@ -15,11 +15,11 @@ export default function LearnNewSkill() {
                 className="about-content__title customSized"
                 data-aos="fade-up"
               >
-                <span>Learn</span> new skills when and where you like.
+                We share our <span>skills</span> and <span>passion</span> with YOU.
               </h2>
               <p className="about-content__text" data-aos="fade-up">
-                Use the list below to bring attention to your product’s key
-                <br /> differentiator.
+                No shareholders, no money squeezing, our only desire is to create
+                a learning platform for coding available for everyone.
               </p>
               <div className="y-gap-20 pt-30">
                 {featureOne.map((elm, i) => (
@@ -49,7 +49,7 @@ export default function LearnNewSkill() {
 
               <div className="d-inline-block mt-30">
                 <Link href="/signup" className="button -md -dark-1 text-white">
-                  Join Free
+                  Join Waitlist
                 </Link>
               </div>
             </div>
@@ -64,7 +64,7 @@ export default function LearnNewSkill() {
                 width={750}
                 height={850}
                 style={{ height: "100%", width: "100%" }}
-                src="/assets/img/about/1.png"
+                src="/assets/img/about/community_table_free.png"
                 alt="image"
               />
             </div>

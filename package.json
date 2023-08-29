@@ -38,5 +38,9 @@
     "svg": "^0.1.0",
     "swiper": "^8.0.0",
     "tsparticles": "^2.11.0"
+  },
+  "devDependencies": {
+    "eslint": "8.48.0",
+    "eslint-config-next": "13.4.19"
   }
 }

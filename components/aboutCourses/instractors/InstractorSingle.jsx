@@ -65,7 +65,7 @@ export default function InstractorSingle({ id }) {
                   <div className="d-flex x-gap-20 pt-15">
                     <div className="d-flex items-center text-white">
                       <div className="icon-star mr-10"></div>
-                      <div className="text-13 lh-1">Instructor Rating</div>
+                      <div className="text-13 lh-1"> {pageItem.rating || 4.5} Instructor Rating</div>
                     </div>
 
                     <div className="d-flex items-center text-white">
@@ -147,31 +147,32 @@ export default function InstractorSingle({ id }) {
                   >
                     <h4 className="text-20">Description</h4>
                     <p className="text-light-1 mt-30">
-                      Phasellus enim magna, varius et commodo ut, ultricies
-                      vitae velit. Ut nulla tellus, eleifend euismod
-                      pellentesque vel, sagittis vel justo. In libero urna,
-                      venenatis sit amet ornare non, suscipit nec risus. Sed
-                      consequat justo non mauris pretium at tempor justo
-                      sodales. Quisque tincidunt laoreet malesuada. Cum sociis
-                      natoque penatibus et magnis dis parturient montes,
-                      nascetur.
+                      I am a seasoned software engineer with over 17 years of
+                      experience across various domains. In recent years, my
+                      focus has been on highload server-side projects, data- and
+                      machine-learning-driven applications, and platform
+                      development, where I love tinkering with infrastructure,
+                      containers, and Cloud Native technologies.
+
+                      While there isn't a Wikipedia page about me (sorry
+                      folks!), a media bio is available below.
                       <br />
                       <br />
-                      This course is aimed at people interested in UI/UX Design.
-                      We’ll start from the very beginning and work all the way
-                      through, step by step. If you already have some UI/UX
-                      Design experience but want to get up to speed using Adobe
-                      XD then this course is perfect for you too!
-                      <br />
-                      <br />
-                      First, we will go over the differences between UX and UI
-                      Design. We will look at what our brief for this real-world
-                      project is, then we will learn about low-fidelity
-                      wireframes and how to make use of existing UI design kits.
+                      Technology is my driving force, and I firmly believe that
+                      anyone with a passion for it can learn to code. As a
+                      fervent advocate of this ideology, my heart lies in
+                      content creation. It affords me the opportunity to connect
+                      with like-minded individuals, stay up-to-date with the
+                      latest industry trends, and witness the growth of other
+                      tech enthusiasts - often younger generations - as they
+                      embark on their journey in this dynamic field. I am deeply
+                      inspired by the idea that we all stand on the shoulders of
+                      giants, and take great pride in observing the exponential
+                      expansion of our community.
                     </p>
-                    <button className="button underline text-purple-1 mt-30">
-                      Show More
-                    </button>
+                    {/*<button className="button underline text-purple-1 mt-30">*/}
+                    {/*  Show More*/}
+                    {/*</button>*/}
                   </div>
 
                   <div
@@ -180,7 +181,7 @@ export default function InstractorSingle({ id }) {
                     } `}
                   >
                     <div className="row">
-                      {coursesData.slice(0, 2).map((elm, i) => (
+                      {coursesData.slice(0, 1).map((elm, i) => (
                         <div key={i} className="col-md-6">
                           <div className="coursesCard -type-1 rounded-8 shadow-3 bg-white">
                             <div className="relative">
@@ -290,7 +291,7 @@ export default function InstractorSingle({ id }) {
                                     src={elm.authorImageSrc}
                                     alt="image"
                                   />
-                                  <div>Ali Tufa{elm.authorName}</div>
+                                  <div>{elm.authorName}</div>
                                 </div>
 
                                 <div className="coursesCard-footer__price">

@@ -20,7 +20,7 @@ export default function WhyCourse() {
                 data-aos="fade-up"
                 data-aos-duration={800}
               >
-                Lorem ipsum dolor sit amet, consectetur.
+                Holistic Engineering Focus: Beyond Just Coding Skills
               </p>
             </div>
           </div>

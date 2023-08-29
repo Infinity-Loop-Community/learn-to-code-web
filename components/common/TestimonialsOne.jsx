@@ -25,7 +25,7 @@ export default function TestimonialsOne() {
               </h2>
 
               <p className="sectionTitle__text text-white">
-                Lorem ipsum dolor sit amet, consectetur.
+                Transforming Coding Education: Hear from Our Satisfied Learners.
               </p>
             </div>
           </div>

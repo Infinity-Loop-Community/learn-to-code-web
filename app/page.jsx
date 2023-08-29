@@ -34,7 +34,7 @@ export default function HomePage() {
     <div className="content-wrapper  js-content-wrapper overflow-hidden">
     
       <HomeHero />
-      <Brands/>
+      {/*<Brands/>*/}
       <Categories />
       <Courses/>
       <TestimonialsOne/>
@@ -42,7 +42,7 @@ export default function HomePage() {
       <WhyCourse/>
       <Instructors/>
       <GetApp/>
-      <Blog/>
+      {/*<Blog/>*/}
       <Join/>
       <FooterOne/>
       

@@ -18,7 +18,7 @@ export default function Instructors({ backgroundColor }) {
               </h2>
 
               <p className="sectionTitle__text " data-aos="fade-left">
-                Lorem ipsum dolor sit amet, consectetur.
+                Hand-Picked Talent: Expertise and Passion in Every Lesson
               </p>
             </div>
           </div>
@@ -106,19 +106,19 @@ export default function Instructors({ backgroundColor }) {
           ))}
         </div>
 
-        <div className="row justify-center text-center pt-60 lg:pt-40">
-          <div className="col-auto">
-            <p className="lh-1">
-              Want to help people learn, grow and achieve more in life?
-              <Link
-                className="text-purple-1 underline"
-                href="/instructor-become"
-              >
-                Become an instructor
-              </Link>
-            </p>
-          </div>
-        </div>
+        {/*<div className="row justify-center text-center pt-60 lg:pt-40">*/}
+        {/*  <div className="col-auto">*/}
+        {/*    <p className="lh-1">*/}
+        {/*      Want to help people learn, grow and achieve more in life?&nbsp;*/}
+        {/*      <Link*/}
+        {/*        className="text-purple-1 underline"*/}
+        {/*        href="/instructor-become"*/}
+        {/*      >*/}
+        {/*        Become an instructor*/}
+        {/*      </Link>*/}
+        {/*    </p>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
       </div>
     </section>
   );

@@ -31,7 +31,7 @@ export default function Header() {
                   </Link>
                 </div>
 
-                {/* header explore start */}
+                {/* header explore start
                 <HeaderExplore
                   allClasses={
                     "header__explore text-green-1 ml-60 xl:ml-30 xl:d-none"
@@ -41,24 +41,24 @@ export default function Header() {
               </div>
             </div>
 
-            <Menu allClasses={"menu__nav text-white -is-active"} />
-            <MobileMenu
-              setActiveMobileMenu={setActiveMobileMenu}
-              activeMobileMenu={activeMobileMenu}
-            />
+            {/*<Menu allClasses={"menu__nav text-white -is-active"} />*/}
+            {/*<MobileMenu*/}
+            {/*  setActiveMobileMenu={setActiveMobileMenu}*/}
+            {/*  activeMobileMenu={activeMobileMenu}*/}
+            {/*/>*/}
 
             <div className="col-auto">
               <div className="header-right d-flex items-center">
                 <div className="header-right__icons text-white d-flex items-center">
                   {/* search toggle start */}
-                  <SearchToggle />
+                  {/*<SearchToggle />*/}
                   {/* search toggle end */}
 
                   {/* cart toggle start */}
-                  <CartToggle
-                    parentClassess={"relative ml-30 xl:ml-20"}
-                    allClasses={"d-flex items-center text-white"}
-                  />
+                  {/*<CartToggle*/}
+                  {/*  parentClassess={"relative ml-30 xl:ml-20"}*/}
+                  {/*  allClasses={"d-flex items-center text-white"}*/}
+                  {/*/>*/}
                   {/* cart toggle end */}
 
                   <div className="d-none xl:d-block ml-20">
@@ -73,15 +73,15 @@ export default function Header() {
                 </div>
 
                 <div className="header-right__buttons d-flex items-center ml-30 md:d-none">
-                  <Link href="/login" className="button -underline text-white">
-                    Log in
-                  </Link>
-                  <Link
-                    href="/signup"
-                    className="button -sm -white text-dark-1 ml-30"
-                  >
-                    Sign up
-                  </Link>
+                  {/*<Link href="/login" className="button -underline text-white">*/}
+                  {/*  Log in*/}
+                  {/*</Link>*/}
+                  {/*<Link*/}
+                  {/*  href="/signup"*/}
+                  {/*  className="button -sm -white text-dark-1 ml-30"*/}
+                  {/*>*/}
+                  {/*  Sign up*/}
+                  {/*</Link>*/}
                 </div>
               </div>
             </div>

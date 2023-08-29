@@ -26,7 +26,7 @@ const CategoriesHomeOne = () => {
                 <h2 className="sectionTitle__title ">Top Categories</h2>
 
                 <p className="sectionTitle__text ">
-                  Lorem ipsum dolor sit amet, consectetur.
+                  We only do coding related topics, that's what we love, that's what we are fully focused on.
                 </p>
               </div>
             </div>
@@ -55,14 +55,14 @@ const CategoriesHomeOne = () => {
                   },
                   // when window width is >= 768px
                   768: {
-                    slidesPerView: 4,
+                    slidesPerView: 3,
                   },
                   1200: {
                     // when window width is >= 992px
-                    slidesPerView: 6,
+                    slidesPerView: 3,
                   },
                 }}
-                loop={true}
+                loop={false}
               >
                 {topCategories.map((item, i) => (
                   <SwiperSlide key={i}>

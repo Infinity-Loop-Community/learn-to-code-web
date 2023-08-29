@@ -5,7 +5,7 @@ export const featureOne = [
   },
   {
     id: 2,
-    title: "Easy to follow curriculum",
+    title: "Community driven",
   },
   {
     id: 3,
@@ -13,7 +13,7 @@ export const featureOne = [
   },
   {
     id: 4,
-    title: "Money-back guarantee",
+    title: "From seasoned developers for future developers",
   },
 ];
 
