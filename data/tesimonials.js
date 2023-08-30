@@ -5,7 +5,7 @@ export const testimonials = [
     name: "Sarah Williams",
     position: "Data Scientist",
     comment: "Revolutionary Approach to Learning",
-    description: `The "Learn-To-Code" platform has completely redefined my understanding of coding. The AI-driven dynamic content keeps me engaged and the courses are nothing short of state-of-the-art.`,
+    description: `The "Educrat" platform has completely redefined my understanding of coding. The AI-driven dynamic content keeps me engaged and the courses are nothing short of state-of-the-art.`,
   },
   {
     id: 1,
@@ -29,7 +29,7 @@ export const testimonials = [
     name: "David Lee",
     position: "Content Creator",
     comment: "Creators' Paradise",
-    description: `As a creator, "learn-to-code" gave me a platform to reach a global audience. Their hand-picked approach ensures that students get top-notch content.`,
+    description: `As a creator, "Educrat" gave me a platform to reach a global audience. Their hand-picked approach ensures that students get top-notch content.`,
   },
   {
     id: 4,
