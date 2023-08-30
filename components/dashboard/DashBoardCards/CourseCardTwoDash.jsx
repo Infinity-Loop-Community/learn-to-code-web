@@ -10,7 +10,7 @@ export default function CourseCardTwoDash({ data }) {
     for (let i = Math.floor(data.rating); i >= 1; i--) {
       setRating((pre) => [...pre, "star"]);
     }
-  }, []);
+  }, [data.rating]);
 
   return (
     <div className="col-xl-6">

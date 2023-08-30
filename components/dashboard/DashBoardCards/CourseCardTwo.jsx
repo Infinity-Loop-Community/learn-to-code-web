@@ -10,7 +10,7 @@ export default function CourseCardTwo({ data }) {
     for (let i = Math.floor(data.rating); i >= 1; i--) {
       setRating((pre) => [...pre, "star"]);
     }
-  }, []);
+  }, [data.rating]);
   return (
     <div className="col-xl-3 col-lg-6 col-md-4 col-sm-6">
       <a href="#">

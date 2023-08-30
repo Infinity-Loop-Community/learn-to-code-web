@@ -22,12 +22,12 @@ export default function InstractorSingle({ id }) {
       ...instractorsEight,
       ...instractorsNine,
       marketingCoordinator,
-    ].filter((elm) => elm.id == id)[0];
+    ].filter((elm) => elm.id === id)[0];
 
     if (filtered) {
       setPageItem(filtered);
     }
-  }, []);
+  }, [id]);
 
   return (
     <>

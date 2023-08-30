@@ -9,7 +9,7 @@ export default function Star({ star, textSize, textColor }) {
     for (let i = Math.round(star); i >= 1; i--) {
       setRating((pre) => [...pre, "star"]);
     }
-  }, []);
+  }, [star]);
   return (
     <>
       {rating.map((itm, i) => (

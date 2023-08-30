@@ -31,7 +31,7 @@ const CartToggle = ({ allClasses, parentClassess }) => {
         }
       });
     });
-  }, []);
+  }, [pathname]);
 
   return (
     <>

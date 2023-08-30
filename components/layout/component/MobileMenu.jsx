@@ -15,6 +15,8 @@ export default function MobileMenu({ setActiveMobileMenu, activeMobileMenu }) {
   const [menuItem, setMenuItem] = useState("");
   const [submenu, setSubmenu] = useState("");
 
+  const pathname = usePathname();
+
   useEffect(() => {
     menuList.forEach((elm) => {
       elm?.links?.forEach((elm2) => {
@@ -30,11 +32,10 @@ export default function MobileMenu({ setActiveMobileMenu, activeMobileMenu }) {
         }
       });
     });
-  }, []);
+  }, [pathname]);
   useEffect(() => {
     setShowMenu(true);
   }, []);
-  const pathname = usePathname();
   return (
     <div
       className={`header-menu js-mobile-menu-toggle ${

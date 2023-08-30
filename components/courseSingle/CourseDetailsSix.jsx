@@ -24,8 +24,8 @@ export default function CourseDetailsSix({ id }) {
   const [activeTab, setActiveTab] = useState(1);
   const { isAddedToCartCourses, addCourseToCart } = useContextElement();
   useEffect(() => {
-    setPageItem(coursesData.filter((elm) => elm.id == id)[0] || coursesData[0]);
-  }, []);
+    setPageItem(coursesData.filter((elm) => elm.id === id)[0] || coursesData[0]);
+  }, [id]);
 
   return (
     <>

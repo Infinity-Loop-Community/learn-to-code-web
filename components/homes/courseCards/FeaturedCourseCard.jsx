@@ -9,7 +9,7 @@ export default function FeaturedCourseCard({ data, index }) {
     for (let i = Math.round(data.rating); i >= 1; i--) {
       setRating((pre) => [...pre, "star"]);
     }
-  }, []);
+  }, [data.rating]);
   return (
     <div
       className={`col-lg-4 col-md-6 ${data.id == 1 ? "offset-xl-1" : ""}`}

@@ -21,8 +21,8 @@ export default function CourseDetailsOne({ id }) {
   const [pageItem, setPageItem] = useState(coursesData[0]);
 
   useEffect(() => {
-    setPageItem(coursesData.filter((elm) => elm.id == id)[0] || coursesData[0]);
-  }, []);
+    setPageItem(coursesData.filter((elm) => elm.id === id)[0] || coursesData[0]);
+  }, [id]);
 
   return (
     <div id="js-pin-container" className="js-pin-container relative">

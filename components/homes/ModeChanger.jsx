@@ -20,7 +20,7 @@ export default function ModeChanger({ whiteMode }) {
       document.getElementsByTagName("html")[0]
             .classList.remove("-dark-mode");
   }
-  }, []);
+  }, [whiteMode]);
 
   return <></>;
 }

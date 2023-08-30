@@ -27,7 +27,7 @@ export default function Menu({ allClasses, headerPosition }) {
         }
       });
     });
-  }, []);
+  }, [pathname]);
 
   return (
     <div

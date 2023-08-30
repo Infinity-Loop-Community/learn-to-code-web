@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 export default function ImageLightBox({
   images,
@@ -38,7 +39,8 @@ export default function ImageLightBox({
             <div className="numbertext">
               {i + 1} / {images.length}
             </div>
-            <img
+            <Image
+              alt={elm.text}
               src={elm.image}
               style={{
                 height: "100%",

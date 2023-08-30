@@ -9,7 +9,7 @@ export default function CourceCardSlider({ data, index }) {
     for (let i = Math.round(data.rating); i >= 1; i--) {
       setRating((pre) => [...pre, "star"]);
     }
-  }, []);
+  }, [data.rating]);
   return (
     <div
       className="swiper-slide -type-1 px-10 py-10 border-light  rounded-8"

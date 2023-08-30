@@ -10,7 +10,7 @@ export default function BooksCard({ data }) {
     for (let i = Math.round(data.rating); i >= 1; i--) {
       setRating((pre) => [...pre, "star"]);
     }
-  }, []);
+  }, [data.rating]);
   return (
     <div className="swiper-slide">
       <div className="">

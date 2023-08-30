@@ -31,11 +31,11 @@ export default function ProductDetails({ id }) {
   }, [currentSlideIndex]);
 
   useEffect(() => {
-    const item = productData.filter((elm) => elm.id == id)[0] || productData[0];
+    const item = productData.filter((elm) => elm.id === id)[0] || productData[0];
     setCurrentItem(item);
-    const OtherItems = productData.filter((elm) => elm != item).slice(0, 3);
+    const OtherItems = productData.filter((elm) => elm !== item).slice(0, 3);
     setpageItems([item, ...OtherItems]);
-  }, []);
+  }, [id]);
 
   useEffect(() => {
     setShowSlider(true);

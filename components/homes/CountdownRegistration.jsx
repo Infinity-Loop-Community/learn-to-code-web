@@ -35,8 +35,10 @@ export default function CountdownRegistration() {
 
   useEffect(() => {
     setTimer();
+
+    const intervalElement = interval.current
     return () => {
-      clearInterval(interval.current);
+      clearInterval(intervalElement);
     };
   });
 

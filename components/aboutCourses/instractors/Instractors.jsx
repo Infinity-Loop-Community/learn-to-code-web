@@ -33,15 +33,18 @@ export default function Instractors() {
     document.getElementById("dd30button").classList.remove("-is-dd-active");
     document.getElementById("dd30content").classList.remove("-is-el-visible");
   };
+
+  const teamMembersJson = JSON.stringify(teamMembers);
+
   useEffect(() => {
-    if (currentCategory == "All Categories") {
+    if (currentCategory === "All Categories") {
       setPageData(teamMembers);
     } else {
       setPageData([
-        ...teamMembers.filter((elm) => elm.category == currentCategory),
+        ...teamMembers.filter((elm) => elm.category === currentCategory),
       ]);
     }
-  }, [teamMembers, currentCategory]);
+  }, [teamMembersJson, currentCategory]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

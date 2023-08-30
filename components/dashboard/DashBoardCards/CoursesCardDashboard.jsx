@@ -11,7 +11,7 @@ export default function CoursesCardDashboard({ data }) {
     for (let i = Math.floor(data.rating); i >= 1; i--) {
       setRating((pre) => [...pre, "star"]);
     }
-  }, []);
+  }, [data.rating]);
   return (
     <div className="w-1/5 xl:w-1/3 lg:w-1/2 sm:w-1/1">
       <div className="relative">

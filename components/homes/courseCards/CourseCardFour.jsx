@@ -9,7 +9,7 @@ export default function CourceCardFour({ data, index }) {
     for (let i = Math.round(data.rating); i >= 1; i--) {
       setRating((pre) => [...pre, "star"]);
     }
-  }, []);
+  }, [data.rating]);
   return (
     <div className="" style={{ height: "fit-content" }}>
       <div>

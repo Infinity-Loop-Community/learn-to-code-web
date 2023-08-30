@@ -24,8 +24,8 @@ export default function CourseDetailsFive({ id }) {
   const [activeTab, setActiveTab] = useState(1);
 
   useEffect(() => {
-    setPageItem(coursesData.filter((elm) => elm.id == id)[0] || coursesData[0]);
-  }, []);
+    setPageItem(coursesData.filter((elm) => elm.id === id)[0] || coursesData[0]);
+  }, [id]);
   return (
     <>
       <div className="js-pin-container relative">
