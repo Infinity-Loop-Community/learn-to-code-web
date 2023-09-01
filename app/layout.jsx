@@ -13,6 +13,7 @@ import "aos/dist/aos.css";
 
 import { useEffect } from 'react'
 import Context from '@/context/Context';
+import ConsentBanner from "@/components/legal/ConsentBanner";
 
 
 
@@ -35,7 +36,8 @@ export default function RootLayout({ children }) {
       </head>
       <body  >
         <Context> {children}</Context>
-       
+
+        <ConsentBanner />
         </body>
     </html>
   )
