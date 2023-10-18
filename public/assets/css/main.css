@@ -1178,7 +1178,7 @@ html.-dark-mode .-dark-border-dark-2 {
   border: 1px solid #2B1C55 !important;
 }
 
-html.-dark-mode .sidebar.-base-sidebar .sidebar__item.-is-active {
+html.-dark-mode .sidebar .sidebar__item.-is-active {
   color: var(--color-purple-1) !important;
 }
 
@@ -8539,9 +8539,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .dashboard__main {
-  margin-top: 90px;
+  /*margin-top: 90px;*/
   width: 100%;
-  padding-left: 300px;
+  /*padding-left: 300px;*/
 }
 
 @media (max-width: 1199px) {
@@ -14270,6 +14270,10 @@ h1, h2, h3, h4, h5, h6 {
   .sm\:items-center {
     align-items: center !important;
   }
+}
+
+.position-absolute {
+  position: absolute !important;
 }
 
 .d-none {

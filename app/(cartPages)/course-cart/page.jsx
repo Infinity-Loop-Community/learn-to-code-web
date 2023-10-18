@@ -16,9 +16,9 @@ import React from 'react'
 
 import CourseCart from '../../../components/cartsAndCheckout/CourseCart'
 export const metadata = {
-  title: 'Course-cart || Educrat - Professional LMS Online Education Course NextJS Template',
+  title: 'Course-cart || Learn-to-Code - Professional LMS Online Education Course NextJS Template',
   description:
-    'Elevate your e-learning content with Educrat, the most impressive LMS template for online courses, education and LMS platforms.',
+    'Elevate your e-learning content with Learn-to-Code, the most impressive LMS template for online courses, education and LMS platforms.',
   
 }
 export default function page() {
