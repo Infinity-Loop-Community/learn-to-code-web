@@ -65,15 +65,15 @@ export default function HeaderDashboard() {
   const handleResize = () => {};
   useEffect(() => {
     if (window.innerWidth < 990) {
-      document
-        .getElementById("dashboardOpenClose")
-        .classList.add("-is-sidebar-hidden");
+      // document
+      //   .getElementById("dashboardOpenClose")
+      //   .classList.add("-is-sidebar-hidden");
     }
     const handleResize = () => {
       if (window.innerWidth < 990) {
-        document
-          .getElementById("dashboardOpenClose")
-          .classList.add("-is-sidebar-hidden");
+        // document
+        //   .getElementById("dashboardOpenClose")
+        //   .classList.add("-is-sidebar-hidden");
       }
     };
 

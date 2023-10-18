@@ -8,13 +8,13 @@ export default function PageLinksTwo() {
           <Link href="/">Home</Link>
         </div>
         <div className="breadcrumbs__item">
-          <Link href="/courses-list-3">All courses</Link>
+          <Link href="#">All courses</Link>
         </div>
         <div className="breadcrumbs__item">
-          <Link href={`/courses/${5}`}>User Experience Design</Link>
+          <Link href={`#`}>Learn Frontend Development</Link>
         </div>
         <div className="breadcrumbs__item">
-          <Link href={`/courses/${3}`}>User Interface</Link>
+          <Link href={`#`}>Learn the essentials of the web</Link>
         </div>
       </div>
     </div>

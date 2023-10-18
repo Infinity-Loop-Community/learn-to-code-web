@@ -4,20 +4,20 @@ export const locationData = [
     location: "London",
     address: "328 Queensberry Street, North Melbourne VIC 3051, Australia.",
     phoneNumber: "+(1) 123 456 7890",
-    email: "hi@educrat.com",
+    email: "hi@learn-to-code.io",
   },
   {
     id: 2,
     location: "Paris",
     address: "328 Queensberry Street, North Melbourne VIC 3051, Australia.",
     phoneNumber: "+(1) 123 456 7890",
-    email: "hi@educrat.com",
+    email: "hi@learn-to-code.io",
   },
   {
     id: 3,
     location: "Los Angeles",
     address: "328 Queensberry Street, North Melbourne VIC 3051, Australia.",
     phoneNumber: "+(1) 123 456 7890",
-    email: "hi@educrat.com",
+    email: "hi@learn-to-code.io",
   },
 ];

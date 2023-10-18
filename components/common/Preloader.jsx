@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 
 export default function Preloader() {
-  const [preloaderDisable, setPreloaderDisable] = useState(false);
+  const [preloaderDisable, setPreloaderDisable] = useState(true);
   useEffect(() => {
     setPreloaderDisable(true);
   }, []);

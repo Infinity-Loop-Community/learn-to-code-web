@@ -1,0 +1,1 @@
+export type PagePropsWithParameters = { params: { [key: string]: string } };
