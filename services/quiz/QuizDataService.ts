@@ -1,13 +1,15 @@
 import {QuizDTO} from "@/services/quiz/QuizDTO";
-import {QuizAttemptDTO} from "@/services/quiz/attempt/QuizAttemptDTO";
+import {AttemptDTO} from "@/services/quiz/attempt/AttemptDTO";
 
+export const QUIZ_ID = "fcf7890f-9c72-46d3-931e-34494307be37";
+export const ATTEMPT_ID = "1";
 
 export default class QuizDataService {
 
   async fetchQuizDataByQuizId(quizId: String): Promise<QuizDTO> {
 
     const data: QuizDTO = {
-      id: "fcf7890f-9c72-46d3-931e-34494307be37",
+      id: QUIZ_ID,
       questions: [{
         id: "71cfcec5-0af5-44af-b159-6e0be8afc098",
         text: "What is HTML used for?",
@@ -626,11 +628,11 @@ export default class QuizDataService {
     return quizId === data.id ? Promise.resolve(data) : Promise.reject("unknown id")
   }
 
-  async fetchQuizAttemptDataByAttemptId(attemptId: String): Promise<QuizAttemptDTO> {
+  async fetchQuizAttemptDataByAttemptId(attemptId: String): Promise<AttemptDTO> {
 
-    const data: QuizAttemptDTO = {
-      id: "1",
-      quizId: "fcf7890f-9c72-46d3-931e-34494307be37",
+    const data: AttemptDTO = {
+      id: ATTEMPT_ID,
+      quizId: QUIZ_ID,
       questions: [{
         id: "71cfcec5-0af5-44af-b159-6e0be8afc098",
         text: "What is HTML used for?",

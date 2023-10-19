@@ -1,13 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import {QuizAttemptDTO} from "@/services/quiz/attempt/QuizAttemptDTO";
+import {AttemptDTO} from "@/services/quiz/attempt/AttemptDTO";
+import AttemptNavigationElement from "@/components/quiz/attempt/AttemptNavigationElement";
 
 export default function AttemptNavigation({quizAttemptDTO}:
                                                  {
-                                                   quizAttemptDTO: QuizAttemptDTO,
+                                                   quizAttemptDTO: AttemptDTO,
                                                  }) {
-
-  let quizAnswerCount = quizAttemptDTO.questions.length;
 
   return <div className="col-xl-3 col-lg-3">
     <div className="row y-gap-30">
@@ -18,16 +17,7 @@ export default function AttemptNavigation({quizAttemptDTO}:
           <div className="row x-gap-10 y-gap-10">
 
             {quizAttemptDTO.questions.map((question, index) =>
-                <div key={`quiz-nav-${question.id}`} className="col-auto">
-                  <a
-                      href={`#sec-${question.id}`}
-                      className={`button -single-icon ${question.answers.some(a => a.isCorrect && a.isSelected) ? "-green-2" : "-red-2"} text-dark-1 size-35 rounded-8`}
-                  >
-                    <div className="text-15 lh-1 fw-500">
-                      {index + 1}
-                    </div>
-                  </a>
-                </div>
+                <AttemptNavigationElement key={`quiz-nav-${question.id}`} questionId={question.id} isCorrect={question.answers.some(a => a.isCorrect && a.isSelected)} num={index+1} />
             )}
           </div>
 

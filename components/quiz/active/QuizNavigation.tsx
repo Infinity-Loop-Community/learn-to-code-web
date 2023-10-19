@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from "react";
 import {QuizDTO} from "@/services/quiz/QuizDTO";
+import QuizNavigationElement from "@/components/quiz/active/QuizNavigationElement";
+import QuizCompletionBar from "@/components/quiz/active/QuizCompletionBar";
 
-export default function QuizNavigation({quizDTO, questionIdsWithAnswersProvided}:
-                                           {
+export default function QuizNavigation({quizDTO, questionIdsWithAnswersProvided}: {
                                              quizDTO: QuizDTO,
                                              questionIdsWithAnswersProvided: Set<string>,
                                            }) {
@@ -16,21 +17,7 @@ export default function QuizNavigation({quizDTO, questionIdsWithAnswersProvided}
   return <div className="col-xl-3 col-lg-3">
     <div className="row y-gap-30">
       <div className="col-12">
-        <div className="pt-20 pb-30 px-30 rounded-16 bg-white -dark-bg-dark-1 shadow-4">
-          <h5 className="text-17 fw-500 mb-30">Quiz Complete</h5>
-
-          <div className="d-flex items-center">
-            <div className="progress-bar w-1/1">
-              <div className="progress-bar__bg bg-light-3"></div>
-              <div className="progress-bar__bar bg-purple-1"
-                   style={{width: `${answersProvidedPercentage * 100}%`}}></div>
-            </div>
-
-            <div className="d-flex y-gap-10 justify-between items-center ml-15">
-              <div>{answersProvidedPercentage * 100}%</div>
-            </div>
-          </div>
-        </div>
+        <QuizCompletionBar answersProvidedPercentage={answersProvidedPercentage}/>
       </div>
 
       <div className="col-12">
@@ -40,14 +27,10 @@ export default function QuizNavigation({quizDTO, questionIdsWithAnswersProvided}
           <div className="row x-gap-10 y-gap-10">
 
             {quizDTO.questions.map((question, index) =>
-                <div key={`quiz-nav-${question.id}`} className="col-auto">
-                  <a
-                      href={`#sec-${question.id}`}
-                      className={`button -single-icon ${questionIdsWithAnswersProvided.has(question.id) ? "-green-2" : "-light-3"} text-dark-1 size-35 rounded-8`}
-                  >
-                    <div className="text-15 lh-1 fw-500">{index + 1}</div>
-                  </a>
-                </div>
+                <QuizNavigationElement
+                    key={`quiz-nav-${question.id}`} questionId={question.id}
+                    isAnswered={questionIdsWithAnswersProvided.has(question.id)}
+                    num={index + 1}/>
             )}
           </div>
 

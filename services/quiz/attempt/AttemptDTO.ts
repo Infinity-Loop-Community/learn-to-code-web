@@ -1,6 +1,6 @@
 import {QuestionAttemptDTO} from "@/services/quiz/attempt/QuestionAttemptDTO";
 
-export type QuizAttemptDTO = {
+export type AttemptDTO = {
   id: string;
   quizId: string;
   questions: QuestionAttemptDTO[];

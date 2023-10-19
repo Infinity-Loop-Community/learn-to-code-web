@@ -1,21 +1,20 @@
 "use client";
 
-import React, {useState} from "react";
+import React from "react";
 import FooterNine from "@/components/layout/footers/FooterNine";
 import PageLinksTwo from "@/components/common/PageLinksTwo";
 import AttemptResult from "@/components/quiz/attempt/AttemptResult";
 import AttemptNavigation from "@/components/quiz/attempt/AttemptNavigation";
 import AttemptQuestion from "@/components/quiz/attempt/AttemptQuestion";
-import {QuizAttemptDTO} from "@/services/quiz/attempt/QuizAttemptDTO";
+import {AttemptDTO} from "@/services/quiz/attempt/AttemptDTO";
 
-export default function Attempt({quizAttemptDTO}: { quizAttemptDTO: QuizAttemptDTO }) {
+export default function Attempt({quizAttemptDTO}: { quizAttemptDTO: AttemptDTO }) {
   return (
     <div className="dashboard__main">
       <div className="dashboard__content bg-light-4">
         <div className="row pb-50 mb-10">
           <div className="col-auto">
             <h1 className="text-30 lh-12 fw-700">Quiz</h1>
-
             <PageLinksTwo />
           </div>
         </div>

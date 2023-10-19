@@ -1,20 +1,19 @@
 import React from "react";
 import {indexToChar} from "@/utils/stringUtils";
 import {AnswerDTO} from "@/services/quiz/AnswerDTO";
-import {OnAnswerProvided} from "@/components/quiz/active/Question";
 import {Control, Controller} from "react-hook-form";
+import RadioInput from "@/components/quiz/RadioInput";
 
 export default function QuestionAnswerSelectionGroup(
-    {questionId, answers, onAnswerProvided, control}: {
+    {questionId, answers, control}: {
       questionId: string,
       answers: AnswerDTO[],
-      onAnswerProvided: OnAnswerProvided,
-      control?: Control
+      control: Control
     },
 ) {
 
   return <div className="px-40 py-40">
-    {control && <Controller
+    <Controller
         name={questionId}
         control={control}
         defaultValue=""
@@ -25,14 +24,7 @@ export default function QuestionAnswerSelectionGroup(
                 answers.map((a, i) =>
                     <div key={a.id} className="form-radio d-flex items-center ">
 
-                      <div className="radio">
-                        <input type="radio" {...field} value={a.id}/>
-                        <div className="radio__mark">
-                          <div className="radio__icon"></div>
-                        </div>
-                      </div>
-                      <label htmlFor={a.id}
-                             className="fw-500 ml-12 pointer">{indexToChar(i)}. {a.text}</label>
+                      <RadioInput field={field} value={a.id} checked={false} readOnly={false} labelElement={`${indexToChar(i)}. ${a.text}`} />
                     </div>
                 )
               }
@@ -46,23 +38,6 @@ export default function QuestionAnswerSelectionGroup(
             </>
         )}
     />
-    }
-
-    {!control &&
-                answers.map((a, i) =>
-                    <div key={a.id} className="form-radio d-flex items-center ">
-
-                      <div className="radio">
-                        <input type="radio" value={a.id}/>
-                        <div className="radio__mark">
-                          <div className="radio__icon"></div>
-                        </div>
-                      </div>
-                      <label htmlFor={a.id}
-                             className="fw-500 ml-12 pointer">{indexToChar(i)}. {a.text}</label>
-                    </div>
-                )
-    }
 
   </div>
 

@@ -2897,6 +2897,7 @@ form.contact-form.-light ::placeholder {
 .form-radio .radio__mark {
   height: 15px;
   width: 15px;
+  min-width: 15px;
   border-radius: 100%;
   border: 2px solid var(--color-dark-3);
   display: flex;
@@ -2935,6 +2936,11 @@ form.contact-form.-light ::placeholder {
 .form-radio .radio:hover input ~ .radio__mark {
   background-color: rgba(0, 0, 0, 0.05);
 }
+
+.form-radio .radio:hover input ~ .radio__mark.is-readonly {
+  background-color: unset;
+}
+
 
 .form-switch .switch {
   position: relative;

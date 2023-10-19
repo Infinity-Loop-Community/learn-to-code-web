@@ -1,33 +1,18 @@
 "use client";
 
-import React, {useState} from "react";
+import React from "react";
 import FooterNine from "@/components/layout/footers/FooterNine";
 import PageLinksTwo from "@/components/common/PageLinksTwo";
 import {QuizDTO} from "@/services/quiz/QuizDTO";
 import Question from "@/components/quiz/active/Question";
 import QuizNavigation from "@/components/quiz/active/QuizNavigation";
-import {useForm} from "react-hook-form";
-import {useRouter} from "next/navigation";
-import {getValuesAsStringFromWatchedValues} from "@/utils/reactHookFormUtils";
+import useQuizForm from "@/components/quiz/active/useQuizForm";
+
 
 export default function Quiz({quizDTO}: {
   quizDTO: QuizDTO
 }) {
-  const [questionIdsWithAnswersProvided, setQuestionIdsWithAnswersProvided] = useState(new Set<string>())
-
-  const {handleSubmit, control, watch} = useForm();
-  const {push} = useRouter();
-  const onSubmit = (data: unknown) => {
-    push(`/quiz/${quizDTO.id}/attempt/1`);
-  };
-
-  const watchedValues = watch();
-
-  React.useEffect(() => {
-    const providedAnswerIds = Object.keys(watchedValues).filter(v => watchedValues[v] !== "")
-    setQuestionIdsWithAnswersProvided(new Set(providedAnswerIds))
-
-  }, [getValuesAsStringFromWatchedValues(watchedValues)]);
+  const {handleSubmit, control, questionIdsWithAnswersProvided} = useQuizForm(quizDTO);
 
   return (
       <div className="dashboard__main">
@@ -35,12 +20,11 @@ export default function Quiz({quizDTO}: {
           <div className="row pb-50 mb-10">
             <div className="col-auto">
               <h1 className="text-30 lh-12 fw-700">Quiz</h1>
-
               <PageLinksTwo/>
             </div>
           </div>
 
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit()}>
             <div className="row y-gap-30">
               <div className="col-xl-9">
                 <div className="rounded-16 bg-white -dark-bg-dark-1 shadow-4">
