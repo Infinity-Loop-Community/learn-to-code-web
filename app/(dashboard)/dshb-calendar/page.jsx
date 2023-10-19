@@ -1,7 +1,6 @@
 
 
 import Preloader from '@/components/common/Preloader'
-import DashboardOne from '@/components/dashboard/DashboardOne'
 import Sidebar from '@/components/dashboard/Sidebar'
 import Calender from '@/components/dashboard/calendar/Calender'
 import HeaderDashboard from '@/components/layout/headers/HeaderDashboard'

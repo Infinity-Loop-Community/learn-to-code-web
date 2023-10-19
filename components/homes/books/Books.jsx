@@ -1,13 +1,12 @@
 "use client";
-import Image from "next/image";
-import { Navigation, Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
+import {Navigation, Pagination} from "swiper";
+import {Swiper, SwiperSlide} from "swiper/react";
 
 import "swiper/css";
-import { books } from "@/data/books";
+import {books} from "@/data/books";
 
 import "swiper/css/pagination";
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import BooksCard from "@/components/common/BooksCard";
 
 export default function Books() {

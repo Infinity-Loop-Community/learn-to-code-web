@@ -1,18 +1,10 @@
 "use client";
 import React from "react";
-import { HeaderExplore } from "../component/header-explore";
 
-import SearchToggle from "../component/SearchToggle";
-import CartToggle from "../component/CartToggle";
-import Menu from "../component/Menu";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
-import MobileMenu from "../component/MobileMenu";
 
 export default function Header() {
-  const [activeMobileMenu, setActiveMobileMenu] = useState(false);
-
   return (
     <>
       <header className="header -type-1 ">

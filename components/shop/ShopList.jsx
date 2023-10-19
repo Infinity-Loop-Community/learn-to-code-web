@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { productData, tags, categories } from "@/data/products";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,9 +14,8 @@ export default function ShopList() {
   const { addProductToCart, isAddedToCartProducts } = useContextElement();
 
   const [value, setValue] = useState([200, 1500]);
-  const [pageData, setpageData] = useState();
 
-  const [pageItems, setPageItems] = useState(productData);
+  const [pageItems, _] = useState(productData);
   const handleSubmit = (e) => {
     e.preventDefault();
   };

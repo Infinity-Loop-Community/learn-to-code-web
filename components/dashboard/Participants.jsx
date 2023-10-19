@@ -1,9 +1,9 @@
 "use client";
 
-import { grades, partcipents } from "@/data/dashboard";
-import { letters, alphabetItems } from "@/data/dictionary";
+import { partcipents } from "@/data/dashboard";
+import { letters } from "@/data/dictionary";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import FooterNine from "../layout/footers/FooterNine";
 import Image from "next/image";
 import PageLinksTwo from "../common/PageLinksTwo";

@@ -9,7 +9,6 @@ import {
   levels,
   prices,
   rating,
-  sortingOptions,
 } from "@/data/courses";
 import React, { useState, useEffect } from "react";
 import Star from "../common/Star";
@@ -26,7 +25,7 @@ export default function CourseListFour() {
   const [filterlanguange, setFilterlanguange] = useState([]);
   const [filterDuration, setFilterDuration] = useState([]);
 
-  const [currentSortingOption, setCurrentSortingOption] = useState("Default");
+  const [currentSortingOption, _] = useState("Default");
 
   const [filteredData, setFilteredData] = useState([]);
 
@@ -163,7 +162,6 @@ export default function CourseListFour() {
   };
   const handleFilterLevels = (item) => {
     if (filterLevels.includes(item)) {
-      const filtered = filterLevels.filter((elm) => elm != item);
       setFilterLevels([]);
     } else {
       setFilterLevels([item]);

@@ -8,7 +8,6 @@ import Star from "../common/Star";
 import { coursesData } from "@/data/courses";
 import React, { useState, useEffect } from "react";
 
-import ModalVideo from "react-modal-video";
 import ModalVideoComponent from "../common/ModalVideo";
 import Image from "next/image";
 import { useContextElement } from "@/context/Context";

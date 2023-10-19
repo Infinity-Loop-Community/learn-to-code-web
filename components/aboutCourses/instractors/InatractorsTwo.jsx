@@ -14,8 +14,6 @@ import Link from "next/link";
 export default function InatractorsTwo() {
   const [categoryOpen, setCategoryOpen] = useState(true);
   const [ratingOpen, setRatingOpen] = useState(true);
-  const [currentCategory, setCurrentCategory] = useState("All Categories");
-
   const [filterCategories, setFilterCategories] = useState([]);
   const [filterRatingRange, setFilterRatingRange] = useState([]);
 

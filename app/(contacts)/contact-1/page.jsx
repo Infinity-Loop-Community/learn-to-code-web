@@ -8,7 +8,6 @@
 
 
 import Faq from '@/components/common/Faq'
-import PageLinks from '@/components/common/PageLinks'
 import Preloader from '@/components/common/Preloader'
 import ContactOne from '@/components/contacts/ContactOne'
 

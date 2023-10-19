@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 export default function GetApp() {
   return (
     <section className="layout-pt-lg layout-pb-lg bg-light-3">

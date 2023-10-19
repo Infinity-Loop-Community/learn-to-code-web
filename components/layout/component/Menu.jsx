@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import MobileFooter from "./MobileFooter";
-import Image from "next/image";
 import { menuList } from "@/data/menu";
 import { usePathname } from "next/navigation";
 

@@ -4,7 +4,6 @@ import { letters, alphabetItems } from "@/data/dictionary";
 
 import React, { useState, useEffect } from "react";
 import PageLinksTwo from "../common/PageLinksTwo";
-import Link from "next/link";
 import FooterNine from "../layout/footers/FooterNine";
 
 export default function Dictionary() {

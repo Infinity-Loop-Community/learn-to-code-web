@@ -4,7 +4,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-export default function CourseCardTwo({ data, index }) {
+export default function CourseCardTwo({ data }) {
   const [rating, setRating] = useState([]);
   useEffect(() => {
     for (let i = Math.round(data.rating); i >= 1; i--) {

@@ -1,6 +1,4 @@
 import Preloader from '@/components/common/Preloader'
-import Sidebar from '@/components/dashboard/Sidebar'
-import HeaderDashboard from '@/components/layout/headers/HeaderDashboard'
 import React from 'react'
 import QuizDataService from "@/services/quiz/QuizDataService";
 import Attempt from "@/components/quiz/attempt/Attempt";
@@ -23,15 +21,8 @@ export default async function page(props: PagePropsWithParameters) {
     <div  className="barba-container" data-barba="container">
         <main  className="main-content">
         <Preloader/>
-            {/*<HeaderDashboard/>*/}
             <div  className="content-wrapper js-content-wrapper overflow-hidden">
-              {/*<div id='dashboardOpenClose'  className="dashboard -home-9 js-dashboard-home-9">
-                <div  className="dashboard__sidebar scroll-bar-1">
-                    <Sidebar/>
-
-                </div>*/}
                 <Attempt quizAttemptDTO={quizAttemptDTO}/>
-              {/*</div>*/}
           </div>
         </main>
     </div>

@@ -1,6 +1,5 @@
 
 
-import dynamic from 'next/dynamic'
 
 import FindCourse from '@/components/homes/FindCourse'
 import LearningJourney from '@/components/common/LearningJourney'

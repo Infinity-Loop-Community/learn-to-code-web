@@ -47,8 +47,9 @@
     "@testing-library/react": "14.0.0",
     "@types/node": "20.5.7",
     "@vitejs/plugin-react": "^4.1.0",
-    "eslint": "8.48.0",
+    "eslint": "8.51.0",
     "eslint-config-next": "13.4.19",
+    "eslint-plugin-unused-imports": "3.0.0",
     "jsdom": "22.1.0",
     "vitest": "^0.34.6"
   }

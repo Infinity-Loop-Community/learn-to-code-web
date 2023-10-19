@@ -1,6 +1,4 @@
 import Preloader from '@/components/common/Preloader'
-import Sidebar from '@/components/dashboard/Sidebar'
-import HeaderDashboard from '@/components/layout/headers/HeaderDashboard'
 import React from 'react'
 import QuizDataService from "@/services/quiz/QuizDataService";
 import Quiz from "@/components/quiz/active/Quiz";

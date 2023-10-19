@@ -6,7 +6,6 @@
 import Descriptions from '@/components/aboutCourses/lesson/Descriptions'
 import LessonItems from '@/components/aboutCourses/lesson/LessonItems'
 import Reviews from '@/components/aboutCourses/lesson/Reviews'
-import Video from '@/components/aboutCourses/lesson/Video'
 import VideoTwo from '@/components/aboutCourses/lesson/VideoTwo'
 import Preloader from '@/components/common/Preloader'
 import HeaderTen from '@/components/layout/headers/HeaderTen'

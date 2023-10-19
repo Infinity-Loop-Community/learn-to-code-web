@@ -19,6 +19,8 @@ export default function useQuizForm(quizDTO: QuizDTO) {
     const providedAnswerIds = Object.keys(watchedValues).filter(v => watchedValues[v] !== "")
     setQuestionIdsWithAnswersProvided(new Set(providedAnswerIds))
 
+    // extracting values to watch
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [getValuesAsStringFromWatchedValues(watchedValues)]);
 
   return {handleSubmit: () => handleSubmit(onSubmit), control, questionIdsWithAnswersProvided};

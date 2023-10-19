@@ -23,23 +23,22 @@ describe('Quiz', () => {
   });
 
   it('has no preselected answers', async () => {
-    let quizDTO = await renderQuiz();
+    await renderQuiz();
 
-    const checkedAnswer = await screen.queryByRole("radio", {checked: true})
+    const checkedAnswer = screen.queryByRole("radio", {checked: true})
     expect(checkedAnswer).toBeNull()
   });
 
   it('increases completion bar on answer selection', async () => {
-    let quizDTO = await renderQuiz();
+    await renderQuiz();
 
-    const uncheckedAnswers = await screen.findAllByRole("radio", {checked: false})
     await selectAnswerForQuestions(2);
 
     await screen.findByText("10%")
   });
 
   it('marks selected answers green in quiz navigation', async () => {
-    let quizDTO = await renderQuiz();
+    await renderQuiz();
 
     const quizNavigationAnswerElement = await screen.findByText("1")
     expect(quizNavigationAnswerElement.closest('a')?.className).toContain("light")

@@ -11,7 +11,6 @@
 
 import Preloader from '@/components/common/Preloader'
 import Assignment from '@/components/dashboard/Assignment'
-import DashboardOne from '@/components/dashboard/DashboardOne'
 import Sidebar from '@/components/dashboard/Sidebar'
 import HeaderDashboard from '@/components/layout/headers/HeaderDashboard'
 import React from 'react'
