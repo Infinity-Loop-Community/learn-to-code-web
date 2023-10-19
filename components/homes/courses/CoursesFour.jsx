@@ -1,7 +1,6 @@
 "use client";
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 import CourceCardFour from "@/components/homes/courseCards/CourseCardFour";

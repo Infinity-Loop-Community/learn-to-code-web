@@ -14,7 +14,7 @@ export default function ParticleComponent() {
     await loadFull(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async (container) => {}, []);
+  const particlesLoaded = useCallback(async () => {}, []);
 
   return (
     <Particles

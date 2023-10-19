@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import Pagination from "../common/Pagination";
-import { events, categories, findEvent, tags } from "@/data/events";
+import { events, categories, tags } from "@/data/events";
 import Link from "next/link";
 
 export default function EventsTwo() {

@@ -16,7 +16,6 @@ import Preloader from '@/components/common/Preloader'
 import FooterOne from '@/components/layout/footers/FooterOne'
 import Header from '@/components/layout/headers/Header'
 import HelpCenter from '@/components/others/HelpCenter'
-import Terms from '@/components/terms/Terms'
 import React from 'react'
 export const metadata = {
   title: 'Help-center || Learn-to-Code - Professional LMS Online Education Course NextJS Template',

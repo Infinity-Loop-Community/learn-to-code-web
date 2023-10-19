@@ -1,8 +1,6 @@
 "use client";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { useState, useEffect } from "react";
 
 export default function BooksCard({ data }) {
   const [rating, setRating] = useState([]);

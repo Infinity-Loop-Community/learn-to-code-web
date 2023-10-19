@@ -1,4 +1,4 @@
-import { learnList, requirements, lessonItems } from "@/data/aboutcourses";
+import { learnList, requirements } from "@/data/aboutcourses";
 import React from "react";
 
 export default function Descriptions() {

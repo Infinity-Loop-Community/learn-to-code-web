@@ -9,7 +9,6 @@ import { testimonials } from "../../../data/tesimonials";
 import "swiper/css/effect-cards";
 export default function TestimonialsSix() {
   const [showSlider, setShowSlider] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [roteteSwiper, setRoteteSwiper] = useState(4);
   useEffect(() => {
     setShowSlider(true);
@@ -70,7 +69,6 @@ export default function TestimonialsSix() {
                       className="swiper-slide scaleOne"
                       style={{
                         width: "100%",
-                        transform: "rotate(90deg)",
                         transform: `scale(1)`,
                       }}
                     >

@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore from "swiper";
 import "swiper/css";
 import React from "react";
 import { skillsOne } from "../../../data/skills";

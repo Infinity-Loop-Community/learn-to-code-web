@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 
 import { coursesData } from "@/data/courses";
-import { courseStates } from "@/data/courses";
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import CourceCardSeven from "@/components/homes/courseCards/CourseCardSeven";
@@ -11,7 +10,7 @@ import Link from "next/link";
 
 export default function CoursesSeven() {
   const [showSlider, setShowSlider] = useState(false);
-  const [currentCourseState, setCurrentCourseState] = useState("All");
+  const [currentCourseState, _] = useState("All");
   const [pageItem, setPageItem] = useState([]);
   useEffect(() => {
     if (currentCourseState == "All") {

@@ -3,7 +3,6 @@
 
 
 import Preloader from '@/components/common/Preloader'
-import DashboardOne from '@/components/dashboard/DashboardOne'
 import Sidebar from '@/components/dashboard/Sidebar'
 import Survey from '@/components/dashboard/Survey'
 import HeaderDashboard from '@/components/layout/headers/HeaderDashboard'

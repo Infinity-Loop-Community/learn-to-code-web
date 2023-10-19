@@ -1,4 +1,3 @@
-import Link from "next/link";
 
 import { socialMediaLinks } from "../../data/socialLinks";
 import React from "react";

@@ -14,7 +14,7 @@ export default function Reviews() {
           <h2 className="text-20 fw-500">Reviews</h2>
 
           <ul className="comments__list mt-30">
-            {reviews.slice(0, 2).map((elm, i) => (
+            {reviews.slice(0, 2).map((elm) => (
               <li key={elm.id} className="comments__item">
                 <div className="comments__item-inner md:direction-column">
                   <div className="comments__img mr-20">

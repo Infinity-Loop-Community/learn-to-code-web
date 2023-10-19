@@ -152,7 +152,7 @@ export default function EventDetails({ id }) {
               <div className="mt-60">
                 <h4 className="text-20 mb-30">Our Speakers</h4>
                 <div className="row y-gap-30">
-                  {instractorsNine.slice(0, 4).map((elm, i) => (
+                  {instractorsNine.slice(0, 4).map((elm) => (
                     <div key={elm.id} className="col-lg-3 col-md-6">
                       <div className="text-center">
                         <Image

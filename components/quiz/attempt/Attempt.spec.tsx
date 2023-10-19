@@ -1,10 +1,7 @@
 import {describe, expect, it, vi} from "vitest";
-import {fireEvent, render, screen, waitFor} from '@testing-library/react';
-
-import Quiz from "@/components/quiz/active/Quiz";
+import {render, screen} from '@testing-library/react';
 import QuizDataService from "@/services/quiz/QuizDataService";
 import Attempt from "@/components/quiz/attempt/Attempt";
-import {closest} from "dom7";
 
 vi.mock("next/navigation", () => ({
   useRouter() {

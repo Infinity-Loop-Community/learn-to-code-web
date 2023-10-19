@@ -12,10 +12,6 @@ import Link from "next/link";
 export default function HeaderDashboard() {
   const [messageOpen, setMessageOpen] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
   const [isfullScreen, setIsfullScreen] = useState(false);
   const [isOnNotification, setIsOnNotification] = useState(false);
   const [isOnProfile, setIsOnProfile] = useState(false);
@@ -62,7 +58,6 @@ export default function HeaderDashboard() {
       document?.msExitFullscreen();
     }
   };
-  const handleResize = () => {};
   useEffect(() => {
     if (window.innerWidth < 990) {
       // document

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Slider from "@mui/material/Slider";
 export default function RangeSlider() {
   const [value, setValue] = useState([200, 1500]);

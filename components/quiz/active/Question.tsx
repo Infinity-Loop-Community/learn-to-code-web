@@ -4,8 +4,6 @@ import React from "react";
 import {QuestionDTO} from "@/services/quiz/QuestionDTO";
 import {Control} from "react-hook-form";
 
-export type OnAnswerProvided = (questionId: string, answerId: string) => void;
-
 export default function Question(
     {num, questionDTO, control}: {
       num: number,

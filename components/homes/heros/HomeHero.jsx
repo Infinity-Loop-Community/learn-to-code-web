@@ -3,7 +3,7 @@ import gsap from "gsap";
 import Link from "next/link";
 import { ShapeRendering } from "../../../svg/index";
 import React, { useEffect } from "react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 import hero_bg from "../../../public/assets/img/home-1/hero/bg.png";
 import masthead_icon_1 from "../../../public/assets/img/masthead/icons/1.svg";

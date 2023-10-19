@@ -4,7 +4,6 @@
 
 
 import Preloader from '@/components/common/Preloader'
-import DashboardOne from '@/components/dashboard/DashboardOne'
 import Forums from '@/components/dashboard/Forums'
 import Sidebar from '@/components/dashboard/Sidebar'
 import HeaderDashboard from '@/components/layout/headers/HeaderDashboard'
