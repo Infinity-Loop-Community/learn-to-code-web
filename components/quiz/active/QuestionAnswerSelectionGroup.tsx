@@ -24,7 +24,7 @@ export default function QuestionAnswerSelectionGroup(
                 answers.map((a, i) =>
                     <div key={a.id} className="form-radio d-flex items-center ">
 
-                      <RadioInput field={field} value={a.id} checked={false} readOnly={false} labelElement={`${indexToChar(i)}. ${a.text}`} />
+                      <RadioInput field={field} value={a.id} checked={false} readOnly={false} labelElement={<>${indexToChar(i)}. ${a.text}</>} />
                     </div>
                 )
               }
