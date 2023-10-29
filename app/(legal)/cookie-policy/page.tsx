@@ -1,10 +1,10 @@
-import PageLinks from '@/components/common/PageLinks'
 import Preloader from '@/components/common/Preloader'
 
 import FooterOne from '@/components/layout/footers/FooterOne'
 import Header from '@/components/layout/headers/Header'
 import React from 'react'
 import CookiePolicy from "@/components/legal/CookiePolicy";
+import PageLinksOne from "@/components/common/PageLinksOne";
 export const metadata = {
   title: 'Terms || Learn-to-Code - Professional LMS Online Education Course NextJS Template',
   description:
@@ -18,7 +18,7 @@ export default function page() {
 
         <Header/>
         <div className="content-wrapper js-content-wrapper overflow-hidden">
-          <PageLinks/>
+          <PageLinksOne/>
           <CookiePolicy/>
           <FooterOne/>
         </div>

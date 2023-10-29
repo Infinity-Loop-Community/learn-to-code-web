@@ -15,11 +15,6 @@ import { useEffect } from 'react'
 import Context from '@/context/Context';
 import ConsentBanner from "@/components/legal/ConsentBanner";
 
-
-
-
-
-
 export default function RootLayout({ children }) {
   useEffect(() => {
     AOS.init({

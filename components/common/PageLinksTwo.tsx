@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function PageLinks({courseTitle, courseStepTitle}: { courseTitle: string, courseStepTitle: string }) {
+export default function PageLinksTwo({courseTitle = "No Course Title", courseStepTitle = "No Course Step Title"}: { courseTitle: string, courseStepTitle: string }) {
   return (
     <div className="breadcrumbs mt-10 pt-0 pb-0">
       <div className="breadcrumbs__content">
