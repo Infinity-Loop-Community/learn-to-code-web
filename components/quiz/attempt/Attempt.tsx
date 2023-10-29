@@ -2,11 +2,11 @@
 
 import React from "react";
 import FooterNine from "@/components/layout/footers/FooterNine";
-import PageLinksTwo from "@/components/common/PageLinksTwo";
 import AttemptResult from "@/components/quiz/attempt/AttemptResult";
 import AttemptNavigation from "@/components/quiz/attempt/AttemptNavigation";
 import AttemptQuestion from "@/components/quiz/attempt/AttemptQuestion";
 import {AttemptDTO} from "@/services/quiz/attempt/AttemptDTO";
+import PageLinks from "@/components/common/PageLinks";
 
 export default function Attempt({quizAttemptDTO}: { quizAttemptDTO: AttemptDTO }) {
   return (
@@ -15,7 +15,7 @@ export default function Attempt({quizAttemptDTO}: { quizAttemptDTO: AttemptDTO }
         <div className="row pb-50 mb-10">
           <div className="col-auto">
             <h1 className="text-30 lh-12 fw-700">Quiz</h1>
-            <PageLinksTwo />
+            <PageLinks courseStepTitle={quizAttemptDTO.courseStep.title} courseTitle={quizAttemptDTO.course.title} />
           </div>
         </div>
 

@@ -16,9 +16,10 @@ import FooterOne from "../components/layout/footers/FooterOne";
 import Preloader from "@/components/common/Preloader";
 
 export const metadata = {
-  title: 'Home-1 || Learn-to-Code - Professional LMS Online Education Course NextJS Template',
+  title: 'Learn-to-Code: Expert-Led Software Engineering Education Platform',
+
   description:
-    'Elevate your e-learning content with Learn-to-Code, the most impressive LMS template for online courses, education and LMS platforms.',
+    'Dive into the world of software engineering with Learn to Code. Access key knowledge for free, and explore advanced features with a subscription. Join our community-driven platform, crafted with modern, state-of-the-art AI tools, and led by seasoned experts from top tech companies.',
   
 }
 

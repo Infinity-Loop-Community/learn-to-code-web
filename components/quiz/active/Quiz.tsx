@@ -2,11 +2,11 @@
 
 import React from "react";
 import FooterNine from "@/components/layout/footers/FooterNine";
-import PageLinksTwo from "@/components/common/PageLinksTwo";
 import {QuizDTO} from "@/services/quiz/QuizDTO";
 import Question from "@/components/quiz/active/Question";
 import QuizNavigation from "@/components/quiz/active/QuizNavigation";
 import useQuizForm from "@/components/quiz/active/useQuizForm";
+import PageLinks from "@/components/common/PageLinks";
 
 
 export default function Quiz({quizDTO}: {
@@ -20,7 +20,7 @@ export default function Quiz({quizDTO}: {
           <div className="row pb-50 mb-10">
             <div className="col-auto">
               <h1 className="text-30 lh-12 fw-700">Quiz</h1>
-              <PageLinksTwo/>
+              <PageLinks courseTitle={quizDTO.course.title} courseStepTitle={quizDTO.courseStep.title} />
             </div>
           </div>
 

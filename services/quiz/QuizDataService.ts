@@ -2,7 +2,7 @@ import {QuizDTO} from "@/services/quiz/QuizDTO";
 import {AttemptDTO} from "@/services/quiz/attempt/AttemptDTO";
 
 export const QUIZ_ID = "fcf7890f-9c72-46d3-931e-34494307be37";
-export const ATTEMPT_ID = "1";
+export const ATTEMPT_ID = "37093624-0540-46b5-b135-23ae68f646fe";
 
 export default class QuizDataService {
 
@@ -10,6 +10,17 @@ export default class QuizDataService {
 
     const data: QuizDTO = {
       id: QUIZ_ID,
+
+      course: {
+        id: "32ca6d6e-5feb-494c-8950-c3a0c76f4b3f",
+        title: 'Frontend Development',
+      },
+
+      courseStep: {
+        id: "c7486278-a50c-4629-89b9-cc1c74d7a538",
+        title: 'The essentials of the Web',
+      },
+
       questions: [{
         id: "71cfcec5-0af5-44af-b159-6e0be8afc098",
         text: "What is HTML used for?",
@@ -632,7 +643,19 @@ export default class QuizDataService {
 
     const data: AttemptDTO = {
       id: ATTEMPT_ID,
+      attempt: 1,
       quizId: QUIZ_ID,
+
+      course: {
+        id: "32ca6d6e-5feb-494c-8950-c3a0c76f4b3f",
+        title: 'Frontend Development',
+      },
+
+      courseStep: {
+        id: "c7486278-a50c-4629-89b9-cc1c74d7a538",
+        title: 'The essentials of the Web',
+      },
+
       questions: [{
         id: "71cfcec5-0af5-44af-b159-6e0be8afc098",
         text: "What is HTML used for?",
