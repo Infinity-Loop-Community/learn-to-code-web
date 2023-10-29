@@ -1,6 +1,6 @@
 import {describe, expect, it, vi} from "vitest";
 import {render, screen} from '@testing-library/react';
-import QuizDataService from "@/services/quiz/QuizDataService";
+import QuizDataService, {ATTEMPT_ID} from "@/services/quiz/QuizDataService";
 import Attempt from "@/components/quiz/attempt/Attempt";
 
 vi.mock("next/navigation", () => ({
@@ -14,7 +14,7 @@ vi.mock("next/navigation", () => ({
 describe('Attempt', () => {
   it('renders questions', async () => {
     const quizDataService = new QuizDataService();
-    let attemptDTO = await quizDataService.fetchQuizAttemptDataByAttemptId("1");
+    let attemptDTO = await quizDataService.fetchQuizAttemptDataByAttemptId(ATTEMPT_ID);
 
     render(<Attempt quizAttemptDTO={attemptDTO}/>);
 
@@ -24,7 +24,7 @@ describe('Attempt', () => {
 
   it('has preselected all answers', async () => {
     const quizDataService = new QuizDataService();
-    let attemptDTO = await quizDataService.fetchQuizAttemptDataByAttemptId("1");
+    let attemptDTO = await quizDataService.fetchQuizAttemptDataByAttemptId(ATTEMPT_ID);
 
     render(<Attempt quizAttemptDTO={attemptDTO}/>);
 
@@ -34,7 +34,7 @@ describe('Attempt', () => {
 
   it('shows improvement count', async () => {
     const quizDataService = new QuizDataService();
-    let attemptDTO = await quizDataService.fetchQuizAttemptDataByAttemptId("1");
+    let attemptDTO = await quizDataService.fetchQuizAttemptDataByAttemptId(ATTEMPT_ID);
 
     render(<Attempt quizAttemptDTO={attemptDTO}/>);
 
@@ -43,7 +43,7 @@ describe('Attempt', () => {
 
   it('marks correct answers green in quiz navigation', async () => {
     const quizDataService = new QuizDataService();
-    let attemptDTO = await quizDataService.fetchQuizAttemptDataByAttemptId("1");
+    let attemptDTO = await quizDataService.fetchQuizAttemptDataByAttemptId(ATTEMPT_ID);
 
     render(<Attempt quizAttemptDTO={attemptDTO}/>);
 
@@ -53,7 +53,7 @@ describe('Attempt', () => {
 
   it('marks wrong answers red in quiz navigation', async () => {
     const quizDataService = new QuizDataService();
-    let attemptDTO = await quizDataService.fetchQuizAttemptDataByAttemptId("1");
+    let attemptDTO = await quizDataService.fetchQuizAttemptDataByAttemptId(ATTEMPT_ID);
 
     render(<Attempt quizAttemptDTO={attemptDTO}/>);
 
@@ -63,7 +63,7 @@ describe('Attempt', () => {
 
   it('redirects to quiz page on retry click', async () => {
     const quizDataService = new QuizDataService();
-    let attemptDTO = await quizDataService.fetchQuizAttemptDataByAttemptId("1");
+    let attemptDTO = await quizDataService.fetchQuizAttemptDataByAttemptId(ATTEMPT_ID);
 
     render(<Attempt quizAttemptDTO={attemptDTO}/>);
 
