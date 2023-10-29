@@ -1,5 +1,5 @@
 import React from "react";
-import {indexToChar} from "@/utils/stringUtils";
+import {indexToChar} from "@/libs/utils/stringUtils";
 import {AnswerDTO} from "@/services/quiz/AnswerDTO";
 import {Control, Controller} from "react-hook-form";
 import RadioInput from "@/components/quiz/RadioInput";

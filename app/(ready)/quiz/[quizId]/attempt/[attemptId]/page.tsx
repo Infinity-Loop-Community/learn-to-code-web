@@ -2,7 +2,7 @@ import Preloader from '@/components/common/Preloader'
 import React from 'react'
 import QuizDataService from "@/services/quiz/QuizDataService";
 import Attempt from "@/components/quiz/attempt/Attempt";
-import {PagePropsWithParameters} from "@/utils/nextUtils";
+import {PagePropsWithParameters} from "@/libs/utils/nextUtils";
 
 export const metadata = {
   title: 'Dashboard-quiz || Learn-to-Code - Professional LMS Online Education Course NextJS Template',

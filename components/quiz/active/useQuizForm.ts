@@ -2,7 +2,7 @@ import {QuizDTO} from "@/services/quiz/QuizDTO";
 import {useRouter} from "next/navigation";
 import React, {useState} from "react";
 import {useForm} from "react-hook-form";
-import {getValuesAsStringFromWatchedValues} from "@/utils/reactHookFormUtils";
+import {getValuesAsStringFromWatchedValues} from "@/libs/utils/reactHookFormUtils";
 
 export default function useQuizForm(quizDTO: QuizDTO) {
   const {push} = useRouter();

@@ -1,5 +1,5 @@
 import {QuestionDTO} from "@/services/quiz/QuestionDTO";
-import {indexToChar} from "@/utils/stringUtils";
+import {indexToChar} from "@/libs/utils/stringUtils";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMinus, faPlus} from "@fortawesome/free-solid-svg-icons";
 import React, {useState} from "react";

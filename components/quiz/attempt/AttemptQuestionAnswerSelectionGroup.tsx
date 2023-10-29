@@ -1,5 +1,5 @@
 import React from "react";
-import {indexToChar} from "@/utils/stringUtils";
+import {indexToChar} from "@/libs/utils/stringUtils";
 import {AnswerAttemptDTO} from "@/services/quiz/attempt/AnswerAttemptDTO";
 import AnswerBadge from "@/components/quiz/attempt/AnswerBadge";
 import RadioInput from "@/components/quiz/RadioInput";

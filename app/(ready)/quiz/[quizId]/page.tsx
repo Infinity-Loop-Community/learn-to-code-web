@@ -2,7 +2,7 @@ import Preloader from '@/components/common/Preloader'
 import React from 'react'
 import QuizDataService from "@/services/quiz/QuizDataService";
 import Quiz from "@/components/quiz/active/Quiz";
-import {PagePropsWithParameters} from "@/utils/nextUtils";
+import {PagePropsWithParameters} from "@/libs/utils/nextUtils";
 
 export const metadata = {
   title: 'Dashboard-quiz || Learn-to-Code - Professional LMS Online Education Course NextJS Template',
@@ -25,7 +25,7 @@ export default async function page(props: PagePropsWithParameters) {
         <main  className="main-content">
         <Preloader/>
             <div  className="content-wrapper js-content-wrapper overflow-hidden">
-                <Quiz quizDTO={quizDTO}/>
+              <Quiz quizDTO={quizDTO}/>
           </div>
         </main>
     </div>
