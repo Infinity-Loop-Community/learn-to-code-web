@@ -11,6 +11,9 @@ export const metadata = {
       'Sign in to your Learn to Code account and unlock a treasure trove of software engineering knowledge. From foundational concepts to advanced AI-based tools, step into a world led by industry veterans from premier tech companies.',
 }
 
+// requires aws credentials, and a csrf token that are only available at runtime, hence needs to be dynamic
+export const dynamic = 'force-dynamic'
+
 export default async function page() {
   const providers = await getProviders();
 
