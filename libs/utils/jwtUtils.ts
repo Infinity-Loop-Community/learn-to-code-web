@@ -4,6 +4,8 @@ import {JWTEncodeParams} from "next-auth/jwt/types";
 
 export const JWT_EXPIRATION_DURATION_30_DAYS = 60 * 60 * 24 * 30;
 
+export const JWT_COOKIE_NAME = 'next-auth.session-token'
+
 export async function decodeJwt(data: JWTDecodeParams) {
   let {payload} = await jwtVerify(data.token!!, new TextEncoder().encode(data.secret as string));
   return payload;

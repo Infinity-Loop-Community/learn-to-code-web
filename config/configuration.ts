@@ -1,6 +1,5 @@
 type Config = {
   environment: "dev" | "prod";
-  domain: string;
   apiKeys: {
     twitter: { clientId: string; clientSecret: string };
     gitHub: { clientId: string; clientSecret: string };
@@ -14,8 +13,6 @@ type Config = {
 
 // eslint-disable-next-line import/no-anonymous-default-export
 let config: Config = {
-  domain: "learn-to-code.io",
-
   apiKeys: {
     twitter: {
       clientId: process.env.TWITTER_CLIENT_ID!!,

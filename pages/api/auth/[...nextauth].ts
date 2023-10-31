@@ -5,7 +5,12 @@ import TwitterProvider from "next-auth/providers/twitter";
 import {AuthOptions} from "next-auth/core/types";
 import configuration from "@/config/configuration";
 import {DynamoDBAdapter} from "@auth/dynamodb-adapter";
-import {decodeJwt, encodeJwt, JWT_EXPIRATION_DURATION_30_DAYS} from "@/libs/utils/jwtUtils";
+import {
+  decodeJwt,
+  encodeJwt,
+  JWT_COOKIE_NAME,
+  JWT_EXPIRATION_DURATION_30_DAYS
+} from "@/libs/utils/jwtUtils";
 import DynamoDbClientFactory from "@/libs/dynamodb/DynamoDbClientFactory";
 
 declare module "next-auth" {
@@ -35,14 +40,10 @@ export const authOptions: AuthOptions = {
 
   cookies: {
     sessionToken: {
-      name: `next-auth.session-token`,
+      name: JWT_COOKIE_NAME,
       options: {
         httpOnly: false,
         sameSite: "lax",
-        domain:
-            process.env.NODE_ENV === "production"
-                ? configuration.domain
-                : `localhost`,
         path: "/",
         secure: process.env.NODE_ENV === "production",
       },
