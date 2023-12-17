@@ -950,9 +950,9 @@ export const catagories = [
   "Writing",
 ];
 
-export const courseStates = ["All", "Fetured", "Popular", "Trending"];
+export const courseStates = ["All"];
 
-export const viewStatus = ["All", "Great", "Good", "Medium", "Low"];
+export const viewStatus = ["All"];
 
 export const resentCourses = [
   {

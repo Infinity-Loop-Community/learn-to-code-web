@@ -1,5 +1,11 @@
 type Config = {
   environment: "dev" | "prod";
+  url: {
+    backend: string,
+  },
+  route: {
+    login: string,
+  },
   apiKeys: {
     twitter: { clientId: string; clientSecret: string };
     gitHub: { clientId: string; clientSecret: string };
@@ -11,7 +17,8 @@ type Config = {
   }
 };
 
-// eslint-disable-next-line import/no-anonymous-default-export
+const PRODUCTION = "production";
+
 let config: Config = {
   apiKeys: {
     twitter: {
@@ -28,7 +35,15 @@ let config: Config = {
     }
   },
 
-  environment: process.env.NODE_ENV === "production" ? "prod" : "dev",
+  environment: process.env.NODE_ENV === PRODUCTION ? "prod" : "dev",
+
+  url: {
+    backend: process.env.NODE_ENV === PRODUCTION ? "https://api.learn-to-code.io" : "http://localhost:3000/backend"
+  },
+
+  route: {
+    login: '/login',
+  },
 
   awsAccessKey: {
     id: process.env.NEXT_AUTH_AWS_ACCESS_KEY!!,

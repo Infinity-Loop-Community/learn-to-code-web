@@ -8,12 +8,12 @@ export default function PageHeading() {
           <div className="row">
             <div className="col-auto">
               <div>
-                <h1 className="page-header__title">User Interface Courses</h1>
+                <h1 className="page-header__title">Quizzes</h1>
               </div>
 
               <div>
                 <p className="page-header__text">
-                  Write an introductory description of the category.
+                  Sharpen your skills with our diverse range of coding quizzes. Dive into interactive challenges tailored for all levels - from eager beginners to seasoned pros. Boost your knowledge in all essential areas, and see your coding proficiency soar!
                 </p>
               </div>
             </div>
