@@ -2,7 +2,9 @@ import {describe, expect, it, vi} from "vitest";
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 
 import Quiz from "@/components/quizzes/active/Quiz";
-import CourseDataService, {QUIZ_ID} from "@/services/quiz/CourseDataService";
+import {QUIZ_ID} from "@/services/quiz/CourseDataRemoteRepository";
+import CourseDataRepository from "@/services/quiz/CourseDataRepository";
+import CourseDataStubRepository from "@/tests/stub/CourseDataStubRepository";
 
 let mockPushFn = vi.fn();
 vi.mock("next/navigation", () => ({
@@ -41,9 +43,9 @@ describe('Quiz', () => {
   it('increases completion bar on answer selection', async () => {
     await renderQuiz();
 
-    await selectAnswerForQuestions(2);
+    await selectAnswerForQuestions(1);
 
-    await screen.findByText("10%")
+    await screen.findByText("50%")
   });
 
   it('marks selected answers green in quiz navigation', async () => {
@@ -52,7 +54,7 @@ describe('Quiz', () => {
     const quizNavigationAnswerElement = await screen.findByText("1")
     expect(quizNavigationAnswerElement.closest('a')?.className).toContain("light")
 
-    await selectAnswerForQuestions(2);
+    await selectAnswerForQuestions(1);
 
     expect(quizNavigationAnswerElement.closest('a')?.className).toContain("green")
   });
@@ -79,8 +81,8 @@ describe('Quiz', () => {
 });
 
 async function renderQuiz() {
-  const quizDataService = new CourseDataService();
-  let quizDTO = await quizDataService.fetchCourseQuizData(QUIZ_ID);
+  const courseDataRepository: CourseDataRepository = new CourseDataStubRepository()
+  let quizDTO = await courseDataRepository.fetchCourseQuizData(QUIZ_ID);
 
   render(<Quiz quizDTO={quizDTO} selectedAnswers={{}} userId={"test-user"}/>);
   return quizDTO;
@@ -91,6 +93,6 @@ async function selectAnswerForQuestions(questionCount: number) {
   const uncheckedAnswers = await screen.findAllByRole("radio", {checked: false})
 
   for (let i = 0; i < questionCount; i++) {
-    fireEvent.click(uncheckedAnswers[4 * i])
+    fireEvent.click(uncheckedAnswers[2 * i])
   }
 }

@@ -1,6 +1,6 @@
 import Preloader from '@/components/common/Preloader'
 import React from 'react'
-import CourseDataService from "@/services/quiz/CourseDataService";
+import CourseDataRemoteRepository from "@/services/quiz/CourseDataRemoteRepository";
 import Quiz from "@/components/quizzes/active/Quiz";
 import {PageProps} from "@/libs/utils/nextUtils";
 import {ParticipantDataService} from "@/services/participant/ParticipantDataService";
@@ -14,7 +14,7 @@ import QuizOverviewResponse from "@/services/participant/response/QuizOverviewRe
 export async function generateMetadata({ params }: PageProps) {
   const quizId = params['quizId']
   const cookieValue = headers().get('Cookie') ?? undefined
-  const quizResponse = await quizDataService.fetchCourseQuizData(quizId, cookieValue, 'generateMetadata')
+  const quizResponse = await quizDataService.fetchCourseQuizData(quizId, cookieValue)
 
   return {
     title: `${quizResponse.stepName} Quiz | Learn-to-Code`,
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: PageProps) {
   }
 }
 
-const quizDataService = new CourseDataService()
+const quizDataService = new CourseDataRemoteRepository()
 const participantDataService = new ParticipantDataService()
 
 export default async function page(props: PageProps) {

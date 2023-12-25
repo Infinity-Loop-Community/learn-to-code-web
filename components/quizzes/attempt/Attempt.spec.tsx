@@ -1,9 +1,11 @@
 import {describe, expect, it, vi} from "vitest";
 import {render, screen} from '@testing-library/react';
-import CourseDataService, { QUIZ_ID} from "@/services/quiz/CourseDataService";
+import {QUIZ_ID} from "@/services/quiz/CourseDataRemoteRepository";
 import Attempt from "@/components/quizzes/attempt/Attempt";
 import QuizAttemptDetailResponse from "@/services/participant/response/QuizAttemptDetailResponse";
 import StepQuizResponseWithContext from "@/services/quiz/StepQuizResponseWithContext";
+import CourseDataRepository from "@/services/quiz/CourseDataRepository";
+import CourseDataStubRepository from "@/tests/stub/CourseDataStubRepository";
 
 vi.mock("next/navigation", () => ({
   useRouter() {
@@ -13,11 +15,11 @@ vi.mock("next/navigation", () => ({
   }
 }));
 
-const quizDataService = new CourseDataService();
+const courseDataRepository: CourseDataRepository = new CourseDataStubRepository()
 
 describe('Attempt', () => {
   it('renders questions', async () => {
-    let quizResponse = await quizDataService.fetchCourseQuizData(QUIZ_ID);
+    let quizResponse = await courseDataRepository.fetchCourseQuizData(QUIZ_ID);
     let quizAttemptDetailResponse = getQuizAttemptDetailResponseFor(quizResponse);
 
     render(<Attempt quizResponse={quizResponse} quizAttemptDetailResponse={quizAttemptDetailResponse}/>);
@@ -27,7 +29,7 @@ describe('Attempt', () => {
   });
 
   it('has preselected all answers', async () => {
-    let quizResponse = await quizDataService.fetchCourseQuizData(QUIZ_ID);
+    let quizResponse = await courseDataRepository.fetchCourseQuizData(QUIZ_ID);
     let quizAttemptDetailResponse = getQuizAttemptDetailResponseFor(quizResponse);
 
     render(<Attempt quizResponse={quizResponse} quizAttemptDetailResponse={quizAttemptDetailResponse}/>);
@@ -37,16 +39,16 @@ describe('Attempt', () => {
   });
 
   it('shows improvement count', async () => {
-    let quizResponse = await quizDataService.fetchCourseQuizData(QUIZ_ID);
+    let quizResponse = await courseDataRepository.fetchCourseQuizData(QUIZ_ID);
     let quizAttemptDetailResponse = getQuizAttemptDetailResponseFor(quizResponse);
 
     render(<Attempt quizResponse={quizResponse} quizAttemptDetailResponse={quizAttemptDetailResponse}/>);
 
-    await screen.findByText("10%")
+    await screen.findByText("100%")
   });
 
   it('marks correct answers green in quiz navigation', async () => {
-    let quizResponse = await quizDataService.fetchCourseQuizData(QUIZ_ID);
+    let quizResponse = await courseDataRepository.fetchCourseQuizData(QUIZ_ID);
     let quizAttemptDetailResponse = getQuizAttemptDetailResponseFor(quizResponse);
 
     render(<Attempt quizResponse={quizResponse} quizAttemptDetailResponse={quizAttemptDetailResponse}/>);
@@ -56,7 +58,7 @@ describe('Attempt', () => {
   });
 
   it('marks wrong answers red in quiz navigation', async () => {
-    let quizResponse = await quizDataService.fetchCourseQuizData(QUIZ_ID);
+    let quizResponse = await courseDataRepository.fetchCourseQuizData(QUIZ_ID);
     let quizAttemptDetailResponse = getQuizAttemptDetailResponseFor(quizResponse, false);
 
     render(<Attempt quizResponse={quizResponse} quizAttemptDetailResponse={quizAttemptDetailResponse}/>);
@@ -66,7 +68,7 @@ describe('Attempt', () => {
   });
 
   it('redirects to quiz page on retry click', async () => {
-    let quizResponse = await quizDataService.fetchCourseQuizData(QUIZ_ID);
+    let quizResponse = await courseDataRepository.fetchCourseQuizData(QUIZ_ID);
     let quizAttemptDetailResponse = getQuizAttemptDetailResponseFor(quizResponse);
 
     render(<Attempt quizResponse={quizResponse} quizAttemptDetailResponse={quizAttemptDetailResponse}/>);
@@ -87,7 +89,14 @@ function getQuizAttemptDetailResponseFor(quizResponse: StepQuizResponseWithConte
   let quizAttemptDetailResponse: QuizAttemptDetailResponse = {
     attemptId: 1,
     attemptStatus: "finished",
-    questionsWithAnswer: questionsWithAnswer
+    questionsWithAnswer: questionsWithAnswer,
+    attemptResult: {
+      comparedToCorrectRatioLastTryPercentage: 1,
+      comparedToTimeAveragePercentage: 1,
+      pass: true,
+      timeTakenMins: 1,
+      questionCorrectRatio: 1
+    }
   };
   return quizAttemptDetailResponse;
 }

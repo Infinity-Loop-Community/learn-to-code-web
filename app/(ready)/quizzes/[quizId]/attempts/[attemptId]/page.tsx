@@ -1,6 +1,6 @@
 import Preloader from '@/components/common/Preloader'
 import React from 'react'
-import CourseDataService from "@/services/quiz/CourseDataService";
+import CourseDataRemoteRepository from "@/services/quiz/CourseDataRemoteRepository";
 import Attempt from "@/components/quizzes/attempt/Attempt";
 import {PageProps} from "@/libs/utils/nextUtils";
 import {headers} from "next/headers";
@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: PageProps) {
   }
 }
 
-const quizDataService = new CourseDataService()
+const quizDataService = new CourseDataRemoteRepository()
 
 export default async function page(props: PageProps) {
   const quizId = props.params['quizId']
