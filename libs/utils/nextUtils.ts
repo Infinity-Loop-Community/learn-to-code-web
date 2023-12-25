@@ -1,1 +1,4 @@
-export type PagePropsWithParameters = { params: { [key: string]: string } };
+export type PageProps = {
+  params: { [key: string]: string },
+  searchParams: { [key: string]: string },
+};

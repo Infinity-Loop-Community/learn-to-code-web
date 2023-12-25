@@ -32,7 +32,7 @@ export default function CoursesSlider({ tabBtnStyle }) {
         <div className="tabs -pills js-tabs">
           <div className="row y-gap-20 justify-between items-end">
             <div className="col-auto">
-              <h2 className="text-24 lh-12">Courses to get you started</h2>
+              <h2 className="text-24 lh-12">Quizzes to get you started</h2>
             </div>
 
             <div className="col-auto">

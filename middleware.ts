@@ -23,4 +23,4 @@ async function isTokenValid(nextAuthToken: string | undefined): Promise<boolean>
   }
 }
 
-export const config = {matcher: ["/quiz/:path*"]}
+export const config = {matcher: ["/quizzes/:path*"]}
