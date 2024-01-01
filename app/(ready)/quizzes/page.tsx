@@ -10,6 +10,8 @@ import {authOptions} from "@/pages/api/auth/[...nextauth]";
 import {redirect} from "next/navigation";
 import {ParticipantDataService} from "@/services/participant/ParticipantDataService";
 import {headers} from "next/headers";
+import CourseDataRemoteRepository from "@/services/quiz/CourseDataRemoteRepository";
+import CourseDataRepository from "@/services/quiz/CourseDataRepository";
 
 export const metadata = {
   title: `Quiz Overview | Learn-to-Code`,
@@ -18,6 +20,7 @@ export const metadata = {
 }
 
 const participantDataService = new ParticipantDataService()
+const courseDataeRepository: CourseDataRepository = new CourseDataRemoteRepository()
 
 export default async function page() {
 
@@ -28,6 +31,7 @@ export default async function page() {
   }
 
   const participantQuizOverview = await participantDataService.getQuizOverview(serverSession?.user.id!!, headers().get('Cookie')!!)
+  const courseResponse = await courseDataeRepository.fetchCourse(headers().get('Cookie')!!)
 
   return (
       <div className="main-content  ">
@@ -36,7 +40,7 @@ export default async function page() {
         <div className="content-wrapper  js-content-wrapper overflow-hidden">
           <PageLinks courseStepTitle={"TODO"} courseTitle={"TODO"}/>
           <PageHeading/>
-          <QuizList participantQuizOverview={participantQuizOverview}/>
+          <QuizList participantQuizOverview={participantQuizOverview} courseResponse={courseResponse}/>
 
           <FooterOne/>
         </div>
