@@ -12,7 +12,7 @@ export default function QuizCompletionBar({answersProvidedPercentage}: {answersP
       </div>
 
       <div className="d-flex y-gap-10 justify-between items-center ml-15">
-        <div>{answersProvidedPercentage * 100}%</div>
+        <div>{Math.round(answersProvidedPercentage * 100)}%</div>
       </div>
     </div>
   </div>
