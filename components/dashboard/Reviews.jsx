@@ -81,7 +81,7 @@ export default function Reviews() {
         <div className="row items-center justify-between">
           <div className="col-auto">
             <div className="text-13 lh-1">
-              © 2022 Learn-to-Code. All Right Reserved.
+              © 2022 Sebastian Sigl. All Right Reserved.
             </div>
           </div>
 

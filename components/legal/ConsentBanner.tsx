@@ -10,6 +10,7 @@ export default function ConsentBanner() {
 
   })
 
+  // https://github.com/brainsum/cookieconsent
   return <>
     <Script src="/assets/js/cookieconsent.js" onLoad={() => {
       //@ts-ignore

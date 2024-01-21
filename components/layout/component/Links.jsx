@@ -7,7 +7,7 @@ export default function Links({ allClasses }) {
     <>
       {links.map((link, index) => (
         <Link
-          className={`${allClasses ? allClasses : ""}`}
+          className={`${allClasses ? allClasses : ""} ${link.className ?? ""}`}
           key={index}
           href={link.href}
         >

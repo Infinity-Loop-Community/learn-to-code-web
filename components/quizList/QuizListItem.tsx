@@ -44,7 +44,7 @@ export default function CourseListItem({courseStep, participantQuizOverview, alr
         <div className="col-xl-7 text-17 lh-15 fw-500 text-dark-1 mt-10">
           <Link
               className="linkCustom"
-              href={`/courses/${courseStep.quizzes[0].id}`}
+              href={`/quizzes/${courseStep.quizzes[0].id}`}
           >
             {courseStep.name}
           </Link>

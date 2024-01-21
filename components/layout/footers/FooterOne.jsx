@@ -1,9 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import Link from "next/link";
 import Socials from "@/components/common/Socials";
-import FooterLinks from "../component/FooterLinks";
 import Links from "../component/Links";
 export default function FooterOne() {
   const handleSubmit = (e) => {
@@ -17,7 +15,7 @@ export default function FooterOne() {
             <div className="col-auto">
               <div className="footer-header__logo">
                 <Image
-                  width={140}
+                  width={50}
                   height={50}
                   src="/assets/img/footer/footer-logo.svg"
                   alt="logo"
@@ -27,7 +25,7 @@ export default function FooterOne() {
             <div className="col-auto">
               <div className="footer-header-socials">
                 <div className="footer-header-socials__title text-white">
-                  Follow us on social media
+                  Follow me on social media
                 </div>
                 <div className="footer-header-socials__list">
                   <Socials />
@@ -37,34 +35,11 @@ export default function FooterOne() {
           </div>
         </div>
 
-        <div className="footer-columns">
-          <div className="row y-gap-30">
-            <FooterLinks
-              allClasses={"text-17 fw-500 text-white uppercase mb-25"}
-            />
-
-            <div className="col-xl-4 col-lg-4 col-md-6">
-              <div className="text-17 fw-500 text-white uppercase mb-25">
-                GET IN TOUCH
-              </div>
-              <div className="footer-columns-form">
-                <div>We don’t send spam so don’t worry.</div>
-                <form onSubmit={handleSubmit}>
-                  <div className="form-group">
-                    <input required type="text" placeholder="Email..." />
-                    <button type="submit">Submit</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div className="py-30 border-top-light-15">
           <div className="row justify-between items-center y-gap-20">
             <div className="col-auto">
               <div className="d-flex items-center h-100 text-white">
-                © {new Date().getFullYear()} Learn-to-Code. All Right Reserved.
+                © {new Date().getFullYear()} Sebastian Sigl. All Right Reserved.
               </div>
             </div>
 
@@ -75,16 +50,7 @@ export default function FooterOne() {
                     <Links />
                   </div>
                 </div>
-
-                <div>
-                  <Link
-                    href="#"
-                    className="button px-30 h-50 -dark-6 rounded-200 text-white"
-                  >
-                    <i className="icon-worldwide text-20 mr-15"></i>
-                    <span className="text-15">English</span>
-                  </Link>
-                </div>
+                
               </div>
             </div>
           </div>

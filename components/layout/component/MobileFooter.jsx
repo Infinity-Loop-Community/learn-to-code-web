@@ -14,7 +14,7 @@ export default function MobileFooter() {
             329 Queensberry Street,
             <br /> North Melbourne VIC 3051, Australia.
           </div>
-          <div>hi@learn-to-code.io</div>
+          <div>support@sebastiansigl.com</div>
         </div>
 
         <div className="mobile-socials mt-10">

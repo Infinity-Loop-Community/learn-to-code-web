@@ -9,7 +9,7 @@ export default function FooterNine() {
           <div className="row items-center justify-between">
             <div className="col-auto">
               <div className="text-13 lh-1">
-                © {new Date().getFullYear()} Learn-to-Code. All Right Reserved.
+                © {new Date().getFullYear()} Sebastian Sigl. All Right Reserved.
               </div>
             </div>
 
