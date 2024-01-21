@@ -14,6 +14,7 @@ import GetApp from "../components/homes/getApp/GetApp";
 import Join from "../components/homes/join/Join";
 import FooterOne from "../components/layout/footers/FooterOne";
 import Preloader from "@/components/common/Preloader";
+import {redirect} from "next/navigation";
 
 export const metadata = {
   title: 'Learn-to-Code: Expert-Led Software Engineering Education Platform',
@@ -24,6 +25,7 @@ export const metadata = {
 }
 
 export default function HomePage() {
+  redirect('/quizzes/')
   return (
     
     <>
