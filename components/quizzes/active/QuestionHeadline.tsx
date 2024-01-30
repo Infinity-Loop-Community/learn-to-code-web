@@ -1,5 +1,6 @@
 import React from "react";
 import QuizQuestionResponse from "@/services/quiz/QuizQuestionResponse";
+import Markdown from "markdown-to-jsx";
 
 export default function QuestionHeadline({num, quizQuestionResponse}: { num: number, quizQuestionResponse: QuizQuestionResponse}) {
 
@@ -11,7 +12,9 @@ export default function QuestionHeadline({num, quizQuestionResponse}: { num: num
     </div>
 
     <div className="text-20 lh-1 text-white mt-30">
-      {quizQuestionResponse.text}:
+      <Markdown>
+        {String(quizQuestionResponse.text)}
+      </Markdown>
     </div>
   </div>
 

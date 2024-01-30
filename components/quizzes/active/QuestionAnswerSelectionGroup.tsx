@@ -3,6 +3,7 @@ import {indexToChar} from "@/libs/utils/stringUtils";
 import {Control, Controller} from "react-hook-form";
 import RadioInput from "@/components/quizzes/RadioInput";
 import QuizAnswerResponse from "@/services/quiz/QuizAnswerResponse";
+import Markdown from "markdown-to-jsx";
 
 export default function QuestionAnswerSelectionGroup(
     {questionId, answers, control, selectedAnswer}: {
@@ -25,7 +26,14 @@ export default function QuestionAnswerSelectionGroup(
                 answers.map((a, i) =>
                     <div key={a.id} className="form-radio d-flex items-center ">
 
-                      <RadioInput field={field} value={a.id} checked={selectedAnswer === a.id} readOnly={false} labelElement={<>{indexToChar(i)}. {a.text}</>} />
+                      <RadioInput
+                          field={field}
+                          value={a.id}
+                          checked={selectedAnswer === a.id}
+                          readOnly={false}
+                          labelElement={<>
+                            {indexToChar(i)}.&nbsp;<Markdown>{a.text}</Markdown>
+                          </>} />
                     </div>
                 )
               }

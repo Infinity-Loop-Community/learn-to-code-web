@@ -1,6 +1,7 @@
 import React from "react";
 import AttemptQuestionHeadlineIcon from "@/components/quizzes/attempt/AttemptQuestionHeadlineIcon";
 import QuizQuestionResponse from "@/services/quiz/QuizQuestionResponse";
+import Markdown from "markdown-to-jsx";
 
 export default function AttemptQuestionHeadline(
     {num, questionDTO, isCorrect}: { num: number, questionDTO: QuizQuestionResponse, isCorrect: boolean }) {
@@ -16,7 +17,7 @@ export default function AttemptQuestionHeadline(
     </div>
 
     <div className="text-20 lh-1 text-white mt-15">
-      {questionDTO.text}
+        <Markdown>{String(questionDTO.text)}</Markdown>
     </div>
   </div>
 

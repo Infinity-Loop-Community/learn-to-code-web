@@ -3,6 +3,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMinus, faPlus} from "@fortawesome/free-solid-svg-icons";
 import React, {useState} from "react";
 import QuizQuestionResponse from "@/services/quiz/QuizQuestionResponse";
+import Markdown from "markdown-to-jsx";
 
 export default function QuestionAnswerEvaluation({questionDTO, isCorrect, currentAnswerId}: {
   questionDTO: QuizQuestionResponse,
@@ -33,7 +34,7 @@ export default function QuestionAnswerEvaluation({questionDTO, isCorrect, curren
                   className={`lh-1 fw-500 d-flex flex-column items-start`}>
                 {
                   <div className={`my-4 text-${correctClassNameSuffix2}`}>
-                    <b>{selectedAnswerLetter + ". " + correctAnswer.text + ": "}</b> {selectedAnswer.description}
+                    <b>{selectedAnswerLetter}.&nbsp;<Markdown>{correctAnswer.text}</Markdown>: </b> <Markdown>{selectedAnswer.description}</Markdown>
                   </div>
                 }
                 <div className="accordion -block js-accordion">
@@ -81,8 +82,8 @@ export default function QuestionAnswerEvaluation({questionDTO, isCorrect, curren
                             otherAnswers.map(a => {
                                   const answerLetter = indexToChar(questionDTO.answers.indexOf(a))
                                   return <div key={a.id} className="mb-10">
-                                    <p><b>{answerLetter + ". " + a.text + " is incorrect "}</b>
-                                    </p> {a.description}
+                                    <p><b>{answerLetter}.&nbsp;<Markdown>{a.text}</Markdown> is incorrect</b>
+                                    </p> <Markdown>{a.description}</Markdown>
                                   </div>
                                 }
                             )
@@ -100,9 +101,9 @@ export default function QuestionAnswerEvaluation({questionDTO, isCorrect, curren
                   className={`lh-1 fw-500 d-flex items-start flex-column `}>
                 <div className="text-success-2">
                   <p>
-                    <b>{correctAnswerLetter + ". " + correctAnswer.text + " is correct: "}</b>
+                    <b>{correctAnswerLetter}.&nbsp;<Markdown>{correctAnswer.text}</Markdown> is correct: </b>
                   </p>
-                  <p>{correctAnswer.description}</p>
+                  <p><Markdown>{correctAnswer.description}</Markdown></p>
 
 
                 </div>
@@ -112,8 +113,8 @@ export default function QuestionAnswerEvaluation({questionDTO, isCorrect, curren
                   otherAnswers.map(a => {
                         const answerLetter = indexToChar(questionDTO.answers.indexOf(a))
                         return <div key={a.id} className="mb-10">
-                          <p><b>{answerLetter + ". " + a.text + " is incorrect "}</b>
-                          </p> {a.description}
+                          <p><b>{answerLetter}.&nbsp;<Markdown>{a.text}</Markdown> is incorrect</b>
+                          </p> <Markdown>{a.description}</Markdown>
                         </div>
                       }
                   )
