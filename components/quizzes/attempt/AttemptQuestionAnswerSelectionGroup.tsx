@@ -3,6 +3,7 @@ import {indexToChar} from "@/libs/utils/stringUtils";
 import AnswerBadge from "@/components/quizzes/attempt/AnswerBadge";
 import RadioInput from "@/components/quizzes/RadioInput";
 import QuizAnswerResponse from "@/services/quiz/QuizAnswerResponse";
+import Markdown from "markdown-to-jsx";
 
 export default function AttemptQuestionAnswerSelectionGroup(
     {questionId, answers, selectedAnswerId}: {
@@ -20,7 +21,7 @@ export default function AttemptQuestionAnswerSelectionGroup(
               <RadioInput name={questionId} value={a.id} checked={a.id === selectedAnswerId} readOnly={true}
                           labelElement={
                             <>
-                              <div>{indexToChar(i)}. {a.text}</div>
+                              <div>{indexToChar(i)}.&nbsp;<Markdown>{a.text}</Markdown></div>
 
                               {(a.id === selectedAnswerId || (a.id !== selectedAnswerId && a.isCorrect)) &&
                                   <AnswerBadge isCorrect={a.isCorrect}/>}

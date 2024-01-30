@@ -12,7 +12,9 @@ export default function RadioInput(props: { field?: ControllerRenderProps, name?
         <div className={`radio__mark ${props.readOnly ? "is-readonly" : ""}`}>
           <div className="radio__icon"></div>
         </div>
-        <div className="fw-500 ml-12 pointer w-1/1 d-flex flex-row items-center">{props.labelElement}</div>
+        <div className="fw-500 ml-12 pointer w-1/1 d-flex flex-row items-center">
+          {props.labelElement}
+        </div>
 
       </div>
     </label>

@@ -1,6 +1,8 @@
 'use client'
 
 import '../public/assets/sass/styles.scss'
+import '../public/assets/css/prism.css'
+import '../public/assets/js/prism'
 
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -11,7 +13,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 
-import { useEffect } from 'react'
+import { useEffect} from 'react'
 import Context from '@/context/Context';
 import ConsentBanner from "@/components/legal/ConsentBanner";
 
@@ -26,14 +28,14 @@ export default function RootLayout({ children }) {
   }, []);
   return (
     <html lang="en" className=''>
-      <head>
-      
-      </head>
-      <body  >
-        <Context> {children}</Context>
+    <head>
 
-        <ConsentBanner />
-        </body>
+    </head>
+    <body>
+    <Context> {children}</Context>
+
+    <ConsentBanner/>
+    </body>
     </html>
   )
 }
