@@ -1,6 +1,7 @@
 import StepQuizResponseWithContext from "@/services/quiz/StepQuizResponseWithContext";
 import CourseDataRepository from "@/services/quiz/CourseDataRepository";
 import {QUIZ_ID} from "@/services/quiz/CourseDataRemoteRepository";
+import {CourseResponse} from "@/services/quiz/CourseResponse";
 
 
 export default class CourseDataStubRepository implements CourseDataRepository {
@@ -57,6 +58,20 @@ export default class CourseDataStubRepository implements CourseDataRepository {
           stepName: "stepName"
         } as StepQuizResponseWithContext
     )
+  }
+
+  fetchCourse(_cookieValue?: string): Promise<CourseResponse> {
+    return Promise.resolve({
+      id: "course-id",
+      name: "course-name",
+      steps: [
+        {
+          id: "step-id",
+          name: "step-name",
+          quizzes: []
+        }
+      ]
+    } as CourseResponse)
   }
 
 }

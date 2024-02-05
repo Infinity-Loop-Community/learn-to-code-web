@@ -6,7 +6,7 @@ import {useState, useEffect} from "react";
 import {QuizCardView} from "@/data/quizzes";
 
 export default function QuizCard({data}: { data: QuizCardView }) {
-  const [rating, setRating] = useState([]);
+  const [rating, setRating] = useState<string[]>([]);
   useEffect(() => {
     for (let i = Math.round(data.rating); i >= 1; i--) {
       setRating((pre) => [...pre, "star"]);

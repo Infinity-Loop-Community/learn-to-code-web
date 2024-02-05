@@ -9,12 +9,12 @@ export default function QuizList({participantQuizOverview, courseResponse}: {
 }) {
 
   const passedQuizIds = Object.entries(participantQuizOverview.finishedQuizzes)
-  .map(([quizId, quizAttemptResponse]) => quizAttemptResponse[quizAttemptResponse.length - 1])
+  .map(([_quizId, quizAttemptResponse]) => quizAttemptResponse[quizAttemptResponse.length - 1])
   .filter(attempt => attempt.pass)
   .map(attempt => attempt.quizId)
 
   const failedQuizIds = Object.entries(participantQuizOverview.finishedQuizzes)
-  .map(([quizId, quizAttemptResponse]) => quizAttemptResponse[quizAttemptResponse.length - 1])
+  .map(([_quizId, quizAttemptResponse]) => quizAttemptResponse[quizAttemptResponse.length - 1])
   .filter(attempt => !attempt.pass)
   .map(attempt => attempt.quizId)
 

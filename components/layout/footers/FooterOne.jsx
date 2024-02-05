@@ -3,10 +3,8 @@ import Image from "next/image";
 import React from "react";
 import Socials from "@/components/common/Socials";
 import Links from "../component/Links";
+
 export default function FooterOne() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
   return (
     <footer className="footer -type-1 bg-dark-1 -green-links">
       <div className="container">

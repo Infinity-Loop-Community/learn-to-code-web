@@ -38,7 +38,7 @@ export default function Quiz({quizDTO, selectedAnswers, userId}: {
           await participantDataService.sendParticipantEvent(userId, finishQuizCommand)
         })
       }
-  }, [quizDTO.id, registerOnFormChange, registerOnSubmit])
+  }, [userId, quizDTO.id, registerOnFormChange, registerOnSubmit])
 
   return (
       <div className="dashboard__main">
