@@ -8,6 +8,14 @@ import QuizQuestionResponse from "@/services/quiz/QuizQuestionResponse";
 import QuizOverviewResponse from "@/services/participant/response/QuizOverviewResponse";
 
 export default function CourseListItem({courseStep, participantQuizOverview, alreadyTried}: {courseStep: StepResponse, participantQuizOverview: QuizOverviewResponse, alreadyTried: boolean}) {
+
+  let quizOverviews = Object.entries(participantQuizOverview.finishedQuizzes).find(q => q[0] === courseStep.quizzes[0].id)?.[1]
+
+  let quizOverview
+  if (quizOverviews) {
+    quizOverview = quizOverviews[quizOverviews.length - 1]
+  }
+
   return <div className="col-12 border-bottom-light">
     <div className="coursesCard -type-1 row y-gap-20 flex-row items-center">
       <div className="col-xl-3 col-lg-4">
@@ -106,6 +114,25 @@ export default function CourseListItem({courseStep, participantQuizOverview, alr
                   className="text-14 lh-1">{getDifficulty(courseStep.quizzes[0].questions)}</div>
             </div>
           </div>
+
+          {
+              quizOverview &&
+
+              <div className="col-auto">
+                <div className="d-flex items-center">
+                  <Image
+                      width={16}
+                      height={17}
+                      className="mr-8"
+                      src="/assets/img/coursesCards/icons/4.svg"
+                      alt="Correctness ratio"
+                  />
+                  <div
+                      className={`text-14 lh-1 ${quizOverview.pass ? "text-green-5  " : "text-orange-1"}`}>{Math.round(quizOverview.questionCorrectRatio * 100)} %</div>
+                </div>
+              </div>
+          }
+
         </div>
       </div>
 

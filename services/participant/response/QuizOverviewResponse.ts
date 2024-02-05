@@ -3,6 +3,7 @@ export class QuizAttemptResponse {
   attemptId: number = -1
   pass: boolean = false
   questionsWithAnswer: Record<string, string> = {}
+  questionCorrectRatio: number = 0
 }
 
 export default class QuizOverviewResponse {
