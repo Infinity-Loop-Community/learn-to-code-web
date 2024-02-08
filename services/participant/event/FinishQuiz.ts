@@ -10,4 +10,8 @@ export default class FinishQuiz extends BaseCommand {
     this.quizId = quizId
   }
 
+  getType(): string {
+    return "FinishQuiz";
+  }
+
 }

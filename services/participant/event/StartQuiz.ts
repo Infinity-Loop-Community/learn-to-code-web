@@ -12,4 +12,8 @@ export default class StartQuiz extends BaseCommand {
     this.requiredQuestionsAnswered = requiredQuestionsAnswered
   }
 
+  getType(): string {
+    return "StartQuiz";
+  }
+
 }

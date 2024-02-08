@@ -14,4 +14,8 @@ export default class SelectAnswer extends BaseCommand {
     this.answerId = answerId
   }
 
+  getType(): string {
+    return "SelectAnswer";
+  }
+
 }

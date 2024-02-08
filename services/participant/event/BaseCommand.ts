@@ -1,8 +1,8 @@
 
-export default class BaseCommand {
+export default abstract class BaseCommand {
   private readonly createdAt: Date;
 
-  constructor() {
+  protected constructor() {
     this.createdAt = new Date()
   }
 
@@ -10,9 +10,7 @@ export default class BaseCommand {
     return this.createdAt;
   }
 
-  getType(): string {
-    return this.constructor.name;
-  }
+  abstract getType(): string;
 
   getData(): any {
     return {
