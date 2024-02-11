@@ -38,7 +38,7 @@ let config: Config = {
   environment: process.env.NODE_ENV === PRODUCTION ? "prod" : "dev",
 
   url: {
-    backend: process.env.NODE_ENV === PRODUCTION ? "https://api.sebastiansigl.com" : "http://localhost:3000/backend"
+    backend: process.env.NODE_ENV === PRODUCTION ? "https://api.learn.sebastiansigl.com" : "http://localhost:3000/backend"
   },
 
   route: {
