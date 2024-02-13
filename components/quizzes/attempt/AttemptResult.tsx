@@ -29,7 +29,7 @@ export default function AttemptResult({quizAttemptDetailResponse}: { quizAttempt
             <div>
               <div className="lh-1 fw-500">Time Taken</div>
               <div className="text-24 lh-1 fw-700 text-dark-1 mt-20">{toHumanFriendlyDuration(attemptResult.timeTakenMins)}</div>
-              <div className="lh-1 mt-25"><span className="text-purple-1">{attemptResult.comparedToTimeAveragePercentage}%</span> over average</div>
+              <div className="lh-1 mt-25"><span className="text-purple-1" data-testid="metrics-time-taken">{Math.abs(attemptResult.comparedToTimeAveragePercentage)}%</span> {attemptResult.comparedToTimeAveragePercentage < 0 ? "below" : "above" } average</div>
             </div>
             <i className="text-40 icon-clock-2 text-purple-1"></i></div>
         </div>
@@ -40,7 +40,21 @@ export default function AttemptResult({quizAttemptDetailResponse}: { quizAttempt
             <div>
               <div className="lh-1 fw-500">Attempt</div>
               <div className="text-24 lh-1 fw-700 text-dark-1 mt-20">{getOrdinal(quizAttemptDetailResponse.attemptId)}</div>
-              <div className="lh-1 mt-25"><span className="text-purple-1">{attemptResult.comparedToCorrectRatioLastTryPercentage}%</span> improved</div>
+              <div className="lh-1 mt-25">
+                {
+                    quizAttemptDetailResponse.attemptId == 1 &&
+                    <>
+                      <span className="text-purple-1">&nbsp;</span>
+                    </>
+                }
+
+                {
+                    quizAttemptDetailResponse.attemptId > 1 &&
+                    <>
+                      <span className="text-purple-1">{attemptResult.comparedToCorrectRatioLastTryPercentage}%</span> improved
+                    </>
+                }
+              </div>
             </div>
             <i className="text-40 icon-online-learning text-purple-1"></i></div>
         </div>
