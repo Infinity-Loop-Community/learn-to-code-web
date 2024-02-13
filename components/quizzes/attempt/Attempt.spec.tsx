@@ -18,6 +18,61 @@ vi.mock("next/navigation", () => ({
 const courseDataRepository: CourseDataRepository = new CourseDataStubRepository()
 
 describe('Attempt', () => {
+
+  describe('percentage improvement', () => {
+
+    it('does not show percentage improvement for the first attempt', async () => {
+      let quizResponse = await courseDataRepository.fetchCourseQuizData(QUIZ_ID);
+      let quizAttemptDetailResponse = getQuizAttemptDetailResponseFor(quizResponse);
+
+      render(<Attempt quizResponse={quizResponse}
+                      quizAttemptDetailResponse={quizAttemptDetailResponse}/>);
+
+      const query = screen.queryByText("improved")
+      expect(query).toBeNull()
+    });
+
+    it('does show percentage improvement for the >1 attempt', async () => {
+      let quizResponse = await courseDataRepository.fetchCourseQuizData(QUIZ_ID);
+      let quizAttemptDetailResponse = getQuizAttemptDetailResponseFor(quizResponse, true, 2);
+
+      render(<Attempt quizResponse={quizResponse}
+                      quizAttemptDetailResponse={quizAttemptDetailResponse}/>);
+
+      const query = screen.queryByText("improved")
+      expect(query).not.toBeNull()
+    });
+
+  });
+
+  describe('time taken', () => {
+
+    it('uses below average if time is less than average', async () => {
+      let quizResponse = await courseDataRepository.fetchCourseQuizData(QUIZ_ID);
+      let quizAttemptDetailResponse = getQuizAttemptDetailResponseFor(quizResponse, true, 1, -90);
+
+      render(<Attempt quizResponse={quizResponse}
+                      quizAttemptDetailResponse={quizAttemptDetailResponse}/>);
+
+      await screen.findByText("below average")
+
+      const timeTaken = (await screen.findByTestId("metrics-time-taken")).innerHTML
+      expect(timeTaken).toBe("90%")
+    });
+
+    it('uses above average if time is more than average', async () => {
+      let quizResponse = await courseDataRepository.fetchCourseQuizData(QUIZ_ID);
+      let quizAttemptDetailResponse = getQuizAttemptDetailResponseFor(quizResponse, true, 1, 90);
+
+      render(<Attempt quizResponse={quizResponse}
+                      quizAttemptDetailResponse={quizAttemptDetailResponse}/>);
+
+      const query = screen.findByText("above average")
+      expect(query).not.toBeNull()
+    });
+
+  });
+
   it('renders questions', async () => {
     let quizResponse = await courseDataRepository.fetchCourseQuizData(QUIZ_ID);
     let quizAttemptDetailResponse = getQuizAttemptDetailResponseFor(quizResponse);
@@ -80,19 +135,25 @@ describe('Attempt', () => {
 });
 
 
-function getQuizAttemptDetailResponseFor(quizResponse: StepQuizResponseWithContext, correctAnswers = true) {
+function getQuizAttemptDetailResponseFor(
+    quizResponse: StepQuizResponseWithContext,
+    correctAnswers = true,
+    attemptId = 1,
+    comparedToTimeAveragePercentage = 1
+) {
+
   let questionsWithAnswer: Record<string, string> = {}
   quizResponse.questions.forEach(q => {
     questionsWithAnswer[q.id] = q.answers.find(a => a.isCorrect === correctAnswers)!!.id
   })
 
   let quizAttemptDetailResponse: QuizAttemptDetailResponse = {
-    attemptId: 1,
+    attemptId: attemptId,
     attemptStatus: "finished",
     questionsWithAnswer: questionsWithAnswer,
     attemptResult: {
       comparedToCorrectRatioLastTryPercentage: 1,
-      comparedToTimeAveragePercentage: 1,
+      comparedToTimeAveragePercentage: comparedToTimeAveragePercentage,
       pass: true,
       timeTakenMins: 1,
       questionCorrectRatio: 1
