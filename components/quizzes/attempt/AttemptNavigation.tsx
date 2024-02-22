@@ -29,11 +29,11 @@ export default function AttemptNavigation({quizResponse, quizAttemptDetailRespon
             </button>
           </Link>
 
-          <Link href={`/quizzes/`}>
+          <a href={`/quizzes/`}>
             <button className="button -md -purple-1 text-white mt-10 w-1/1">
               Go to Quiz Overview
             </button>
-          </Link>
+          </a>
 
         </div>
       </div>
